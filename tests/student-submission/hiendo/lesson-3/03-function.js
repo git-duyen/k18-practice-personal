@@ -29,7 +29,7 @@ Gọi hàm với danh sách thực tế và in kết quả. */
 
 function getTopStudents(students, threshold) {
     const result = [];
-    for (i = 0; i < students.length; i++) {
+    for (let i = 0; i < students.length; i++) {
         if (students[i].score >= threshold)
             result.push(students[i].name);
     }

@@ -20,10 +20,7 @@ test('Add 10 personal notes and search by title', async ({ page }) => {
         { title: 'Hạ tầng AI là trụ cột sống còn cho tương lai số', content: 'Cuộc đua toàn cầu về AI thực chất là cuộc đua hạ tầng, việc đầu tư vào hạ tầng AI trở thành điều kiện tiên quyết, theo ông Nguyễn Hoàng Hưng, Giám đốc Công nghệ Viettel AI.' },
         { title: 'Cách Google AI thay đổi công việc giới văn phòng', content: 'Người dùng văn phòng có thể sử dụng AI trong các ứng dụng làm việc hàng ngày, thay vì học cách sử dụng các phầm mềm hoàn toàn mới.' },
         { title: 'Hàn Quốc chạy đua khôi phục 647 dịch vụ công trực tuyến', content: 'Hàn Quốc đã khôi phục được 62 trong số 647 dịch vụ công bị gián đoạn do vụ cháy trung tâm dữ liệu ở Daejeon. ' },
-        { title: 'Ra mắt phân khu đầu tiên tại Vinhomes Green Paradise Cần Giờ', content: 'Phân khu quy mô lớn, nhiều tiện ích nhất, đa dạng loại hình sản phẩm nhà phố, shophouse, villa.' },
-        { title: 'Nên đưa AI vào tiểu học nhưng cần lộ trình thận trọng', content: 'Ông Hồ Đức Thắng, Viện trưởng Công nghệ số và Chuyển đổi số Quốc gia, cho rằng nên đưa AI vào trường tiểu học nhưng cần lộ trình thận trọng, an toàn.' },
-        { title: 'Hành trình tiến tới 6G của Việt Nam', content: 'Ứng dụng công nghệ, sở hữu các nền tảng AI "Make in Vietnam" giúp tập đoàn FPT đạt danh hiệu doanh nghiệp, giải pháp và cá nhân AI xuất sắc.' },
-
+        { title: 'Ra mắt phân khu đầu tiên tại Vinhomes Green Paradise Cần Giờ', content: 'Phân khu quy mô lớn, nhiều tiện ích nhất, đa dạng loại hình sản phẩm nhà phố, shophouse, villa.' }
     ]
     await test.step('Add 10 notes from VnExpress Khoa học', async () => {
         for (let i = 0; i < notes.length; i++) {

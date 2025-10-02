@@ -17,6 +17,7 @@ test('Add 100 items and delete odd items', async ({ page }) => {
         }
     });
 
+    
     await test.step('Delete odd todo items', async () => {
         page.on('dialog', async dialog => {
             await dialog.accept();
@@ -26,5 +27,7 @@ test('Add 100 items and delete odd items', async ({ page }) => {
                 await page.locator(`//button[@id="todo-${i}-delete"]`).click();
             }
         }
+        await expect(page.locator('//li')).toHaveCount(50)
     });
 });
+
