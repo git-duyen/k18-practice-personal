@@ -309,8 +309,8 @@ console.log(className.replace("K58", "K19")); // "   K18 PlayWright   "
 Ví dụ:
 ```js
 let emails = "hiendo@gmail.com, dohien@gmail.com, datdo@gmail.com";
-const arrEmails = emails.split("@");
-console.log(arrEmails); // ["hiendo", "gmail.com, dohien", "gmail.com, datdo", "gmail.com"]
+const arrEmails = emails.split(",");
+console.log(arrEmails); 
 ```
 - substring(): lấy phần chuỗi từ vị trí start -> end ( không bao gồm end)
 

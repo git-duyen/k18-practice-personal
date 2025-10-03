@@ -6,7 +6,7 @@ test('Add multiple products to cart', async ({ page }) => {
     });
 
     await test.step('Click Product Page', async () => {
-        await page.locator("//a[text()= 'Bài học 2: Product page']").click();
+        await page.getByRole('link', { name: 'Bài học 2: Product page' }).click();
     });
 
     await test.step('Add products to cart', async () => {
