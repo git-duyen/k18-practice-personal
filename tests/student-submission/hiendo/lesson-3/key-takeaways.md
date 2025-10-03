@@ -5,7 +5,7 @@
 ### Git Undo Things
 1. **Sửa commit message gần nhất**  
 ```git commit --amend -m "new message"```
--> ```git commit --amend -m "new message":``` sửa commit message gần nhất; nếu muốn thêm file mới mà không đổi message, ``git add <file>`` rồi ```git commit --amend -m "new messge"```, vẫn chỉ tạo 1 commit duy nhất.
+-> ```git commit --amend -m "new message":``` sửa commit message gần nhất; nếu muốn thêm file mới mà không đổi message, ``git add <file>`` rồi ```git commit --amend -m "new message"```, vẫn chỉ tạo 1 commit duy nhất.
 2. **Restore file từ vùng staging về working directory**  
 - Restore 1 hoặc vài file bất kỳ:  
 ```git restore --staged <file_name_1> <file_name_2>  ```
@@ -114,12 +114,12 @@ let/const <tên_object> = { <thuộc_tính>: <giá_trị>, ... }
 
 **Ví dụ:**  
 ``const product = {
-“name”: “Laptop”,
-“price”: 500,
-“isWindow”: true,
-“manufacturer”: {
-“name”: “Acer”,
-“year”: 2024
+"name": "Laptop",
+"price": 500,
+"isWindow": true,
+"manufacturer": {
+"name": "Acer",
+"year": 2024
 }``
 
 - Object `product` có các thuộc tính: `name`, `price`, `isWindow`.  

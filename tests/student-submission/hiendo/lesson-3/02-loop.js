@@ -6,9 +6,9 @@ console.log("Tổng từ 1 đến 100 là", sum)
 
 /* 2. In bảng cửu chương từ 2 đến 9. */
 
-for (i = 2; i <= 9; i++) {
+for (let i = 2; i <= 9; i++) {
     console.log("Bảng cửu chương", `${i}`, "là")
-    for (j = 1; j <= 10; j++) {
+    for (let j = 1; j <= 10; j++) {
         console.log(`${i} * ${j} = ${i * j}`)
     }
 }
@@ -25,8 +25,8 @@ console.log(result3);
 /* 4. In ra 10 email dựa trên tên người dùng và số thứ tự (ví dụ:
 user1@example.com, user2@example.com, ..., user10@example.com). */
 
-for (i = 1; i <= 10; i++) {
-    console.log("user" + `${i}` + "@example.com")
+for (let i = 1; i <= 10; i++) {
+    console.log(`user${i}@example.com`)
 }
 
 /* 5. Tính tổng doanh thu của 12 tháng trong năm dựa trên mảng doanh thu đã cho và
@@ -49,7 +49,7 @@ const revenue =
         { "month": 12, "total": 190 }
     ]
 let sumRevenue = 0;
-for (i = 0; i < revenue.length; i++) {
+for (let i = 0; i < revenue.length; i++) {
     sumRevenue += revenue[i].total;
 }
 console.log(sumRevenue);

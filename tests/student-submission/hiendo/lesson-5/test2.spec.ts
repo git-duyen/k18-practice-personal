@@ -1,5 +1,4 @@
 import { test } from '@playwright/test';
-import { count } from 'console';
 
 test('Add multiple products to cart', async ({ page }) => {
     await test.step('Navigate to material website', async () => {

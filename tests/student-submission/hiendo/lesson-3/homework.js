@@ -65,7 +65,7 @@
 // }
 // 3. 
 // const result = [];
-// for ( i=1;  i<=99; i++){
+// for (let i=1;  i<=99; i++){
 //     if (i %2 !== 0){
 //         result.push(i);
 //     }
@@ -73,7 +73,7 @@
 // }
 // console.log(result);
 // 4. 
-// for(i=1; i<=10; i++){
+// for(let i=1; i<=10; i++){
 //     console.log(`user${i}@exemple.com`);
 // }
 // 5.
@@ -94,7 +94,7 @@
 //     ]
 
 // let sumRevenue = 0;
-// for (i = 0; i < revenue.length; i++) {
+// for (let i = 0; i < revenue.length; i++) {
 //     sumRevenue += revenue[i].total;
 // }
 // console.log(sumRevenue);
@@ -121,7 +121,7 @@ const students = [
 
 function getTopStudents(students, threshold) {
     const result = []; // khai báo riêng trong hàm
-    for (i = 0; i < students.length; i++) {
+    for (let i = 0; i < students.length; i++) {
         if (students[i].score >= threshold) {
             result.push(students[i].name);
         }
@@ -129,5 +129,5 @@ function getTopStudents(students, threshold) {
     return result;
 }
 
-console.log(getTopStudents(students, 8)) // ["Phương"]
+console.log(getTopStudents(students, 8)) 
 

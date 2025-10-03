@@ -9,17 +9,17 @@
 
 ```js
 // Function Declaration
-function add(a, b) {
+function addDeclaration(a, b) {
   return a + b;
 }
 
 // Function Expression
-const add = function(a, b) {
+const addExpression = function(a, b) {
   return a + b;
 };
 
-console.log(add(2, 3));      // OK vì declaration được hoist
-console.log(addExpr(2, 3));  // Lỗi nếu gọi trước khi gán
+console.log(addDeclaration(2, 3));      // OK vì declaration được hoist
+console.log(addExpression(2, 3));  // Lỗi nếu gọi trước khi gán
 ```
 
 **Hoisting:**

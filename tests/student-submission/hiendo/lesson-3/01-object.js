@@ -6,7 +6,7 @@ const car = {
     model: "Corolla",
     year: 2021
 }
-console.log("1. Năm sản xuất của xe là", car["year"]);
+console.log("1. Năm sản xuất của xe là", car.year);
 
 /* 2. Tạo một object person có thuộc tính name, address (là một object lồng với các thuộc
 tính street, city, country). In ra tên đường của người này. */

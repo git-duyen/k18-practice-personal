@@ -1,5 +1,4 @@
 import { test } from '@playwright/test';
-import { count } from 'console';
 
 test('Add 100 items and delete odd items', async ({ page }) => {
     await test.step('Navigate to material website', async () => {

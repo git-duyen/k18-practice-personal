@@ -318,7 +318,7 @@ Ví dụ:
 ```js
 console.log(className.substring(0,3)); // "   "
 console.log(className.trim().substring(0,3)); // "K18"
-console.log(className.substring(5));   // "layWright"
+console.log(className.substring(5));   // "K18 PlayWright   "
 ```
 - indexOf(): tìm index của chuỗi con, nếu không có trả về -1
 

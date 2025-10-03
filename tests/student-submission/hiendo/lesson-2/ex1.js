@@ -1,9 +1,9 @@
 const number = 12;
 let name = "my number";
-var isEven = false;
+let isEven = false;
 
-if (number % 2 < 1) {
-    var isEven = true;
+if (number % 2 === 0) {
+    isEven = true;
     console.log(isEven);
 }
 
