@@ -21,11 +21,15 @@ test('Personal Notes with predefined news', async ({ page }) => {
   });
   
   await test.step('Step 2: Add 10 notes', async () => {
+    const titleInput = page.locator("//input[@id='note-title']");
+    const contentInput = page.locator("//textarea[@id='note-content']");
+    const addButton = page.locator("//button[@id='add-note']");
+
     for (const note of notes) {
-      await page.locator("//input[@id='note-title']").fill(note.title);
-      await page.locator("//textarea[@id='note-content']").fill(note.content);
-      await page.locator("//button[@id='add-note']").click();
-    };
+      await titleInput.fill(note.title);
+      await contentInput.fill(note.content);
+      await addButton.click();
+    }
   });
 
   // cách 1

@@ -209,7 +209,7 @@ console.log(className.replace("Playwright", "Selenium"));
 ```js
 let emails = "duyanh@gmail.com, hoang@gmail.com, thao@gmail.com";
 
-const arrEmails = emails.split(","); // cắt từng phần tử, lấy ký tự "," trong chuỗi làm ranh giới phân chia các phần tử, có thể lấy ký tự @, m, ... bất kỳ trong chuỗi làm ranh giới để chia mảng
+const arrEmails = emails.split(',').map(email => email.trim()); // cắt từng phần tử và loại bỏ khoảng trắng
 console.log(arrEmails); // in ra ['duyanh@gmail.com', 'hoang@gmail.com', 'thao@gmail.com']
 ```
 - **substring(<điểm_bắt_đầu>, <điểm_kết_thúc>)**: chia chuỗi cha thành các chuỗi con

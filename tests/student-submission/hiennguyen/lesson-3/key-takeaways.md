@@ -47,7 +47,7 @@ let/const <ten_object> = {
 // Ex:
 const person = {
     name: "Hien",
-    role: student,
+    role: "student",
 };
 ```
 Lưu ý: không thể thay thế object bằng object mới nhưng có thể edit/add/delete thuộc tính trong object

@@ -126,9 +126,9 @@ x--;<br>
 Ex:<br>
 ```js
 let a = 10;
-b = ++a; // a = 11, b = 11
+let b = ++a; // a = 11, b = 11
 let c = 10;
-d = c++; // d = 10, c = 11
+let d = c++; // d = 10, c = 11
 ```
 ### Toán tử toán học:
 +, -, *, /

@@ -18,7 +18,7 @@ const person = {
     }
 };
 
-console.log(person['address']['street']);
+console.log(person.address.street);
 
 
 // Bai 3
