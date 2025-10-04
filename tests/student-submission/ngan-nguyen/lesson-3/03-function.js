@@ -9,6 +9,7 @@ console.log(`m1: ${m1} \t m2: ${m2}`);
 console.log("------------------------------------------------------");
 
 //Viết hàm findMin nhận 3 tham số a, b, c, trả về giá trị nhỏ nhất. Gọi hàm và in kết quả với 2 bộ số khác nhau.
+/*
 console.log("Function 2")
 function findMin(a, b, c) {
     if (a < b && a < c) {
@@ -18,6 +19,11 @@ function findMin(a, b, c) {
     } else {
         return c;
     }
+}
+*/
+console.log("Function 2")
+function findMin(a, b, c) {
+    return Math.min(a, b, c);
 }
 let min1 = findMin(3, 6, 8);
 let min2 = findMin(5, 2, 9);
@@ -30,7 +36,7 @@ Hàm trả về mảng mới chứa tên của những học sinh có điểm >=
 Gọi hàm với danh sách thực tế và in kết quả.
 */
 console.log("Function 3")
-function getTopStudents(students, threshold) {
+/* function getTopStudents(students, threshold) {
     let topStudents = [];
     for (let i = 0; i < students.length; i++) {
         if (students[i].score >= threshold) {
@@ -38,6 +44,12 @@ function getTopStudents(students, threshold) {
         }
     }
     return topStudents;
+}
+*/
+function getTopStudents(students, threshold) {
+    return students
+        .filter(student => student.score >= threshold)
+        .map(student => student.name);
 }
 const students = [
     { name: "Ngân", score: 9 },

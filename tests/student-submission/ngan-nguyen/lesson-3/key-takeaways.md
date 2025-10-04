@@ -164,8 +164,8 @@ Khi khởi tạo, đặt nhánh mặc định là nhánh main/master:
     ~~~javascript
      let bike = {
          make: 'Honda',
-         model: 'YZF-R3'
-         color: 'Red';
+         model: 'YZF-R3',
+         color: 'Red',
      };
      delete bike.model;
      console.log(bike);

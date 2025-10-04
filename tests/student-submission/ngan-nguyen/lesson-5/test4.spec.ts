@@ -1,4 +1,4 @@
-import { test } from "@playwright/test";
+import { expect, test } from "@playwright/test";
 
 test('Add personal notes', async ({ page }) => {
     const noteList = [
@@ -31,5 +31,7 @@ test('Add personal notes', async ({ page }) => {
 
     await test.step('Search notes', async () => {
         await page.locator(`//input[@id='search']`).fill('iPhone');
+        await expect(page.getByText("iPhone 17 Pro Max vẫn 'đội' giá 8 triệu đồng")).toBeVisible();
+        await expect(page.getByText("Ukraine để lọt toàn bộ tên lửa Iskander-M")).not.toBeVisible();
     })
 });

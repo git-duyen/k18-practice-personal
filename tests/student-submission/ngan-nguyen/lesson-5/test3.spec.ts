@@ -20,10 +20,8 @@ test('Add TO-DO List', async ({ page }) => {
         page.on('dialog', async dialog => {
             await dialog.accept();
         })
-        for (let i = 1; i <= 100; i++) {
-            if (i % 2 === 1) {
-                await page.locator(`//button[@id= 'to-do-${i}-delete']`).click();
-            }
+        for (let i = 1; i <= 100; i += 2) {
+            await page.locator(`//button[@id= 'to-do-${i}-delete']`).click();
         }
     })
 });
