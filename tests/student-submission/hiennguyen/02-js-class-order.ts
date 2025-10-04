@@ -18,8 +18,7 @@ interface Item {
 }
 
 class Order {
-  public totalAmount: number = 0; // tổng số lượng
-  public totalPrice: number = 0; // thêm totalPrice để in tổng tiền
+  public totalAmount: number = 0;
 
   // khởi tạo giá trị đầu vào
   constructor(
@@ -36,8 +35,7 @@ class Order {
 
   // tính tổng số tiền của đơn hàng
   calculateTotal(): void {
-    this.totalAmount = this.items.reduce((sum, item) => sum + item.amount, 0);
-    this.totalPrice = this.items.reduce(
+    this.totalAmount = this.items.reduce(
       (sum, item) => sum + item.price * item.amount * (1 - item.discount),
       0
     );
@@ -45,10 +43,9 @@ class Order {
 
   displayOrder(): void {
     console.log(`orderId: ${this.orderId}`);
-    console.log(`customerName: ${this.customerName}`);
-    console.log(`items:`, this.items);
-    console.log(`totalAmount: ${this.totalAmount.toLocaleString()} cái`);
-    console.log(`totalPrice: ${this.totalPrice.toLocaleString()} vnđ`);
+    console.log(`Tên khách hàng: ${this.customerName}`);
+    console.log(`Sản phẩm:`, this.items);
+    console.log(`Tổng tiền: ${this.totalAmount.toLocaleString()} vnđ`);
   }
 }
 
