@@ -7,7 +7,7 @@ Có thể đặt lại tên cho thư mục clone:
 
 **Note**
 1. Nên chọn clone code bằng **SSH** cho các kho lưu trữ riêng tư hoặc khi cần bảo mật cao, vì nó sử dụng xác thực bằng cặp khóa, an toàn hơn so với **HTTPS**, vốn yêu cầu nhập tên người dùng và mật khẩu. 
-2. **HTTPS** phù hợp với kho lưu trữ công cộng hoặc khi bạn muốn thiết lập nhanh chóng, nhưng cần lưu ý bảo mật khi làm việc trên các mạng không tin
+2. **HTTPS** phù hợp với kho lưu trữ công cộng hoặc khi bạn muốn thiết lập nhanh chóng, nhưng cần lưu ý bảo mật khi làm việc trên các mạng không tin cậy.
 
 ## Pull
 ```git pull origin master```: Lấy code từ nhánh master về máy tính cá nhân. Đảm bảo được đồng bộ và cập nhật với trạng thái mới nhất của nhánh master trên repo.
@@ -42,8 +42,7 @@ Có thể đặt lại tên cho thư mục clone:
 **type**:
 - **feat**: tính năng mới
 - **fix**: sửa lỗi
-- **conf**: thay đổi cấu hình
-(config)
+- **conf**: thay đổi cấu hình (config)
 - **chore**: các thay đổi “lặt vặt” như xóa file không dùng, đổi tên file,...
 
 **short-description**: Mục đích của branch được tạo ra
@@ -65,7 +64,7 @@ Nếu **Class** là bản thiết kế của một thực thể, thì **Method**
  - Là các hàm được gắn với class
  - Thường để thực hiện các hành động liên quán đến đối tượng (class) đó.
 
- ```javascript
+```javascript
  // Định nghĩa một Class (Khuôn mẫu)
 class Car {
     // Hàm khởi tạo (Constructor) để thiết lập các thuộc tính
