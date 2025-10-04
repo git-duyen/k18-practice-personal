@@ -1,7 +1,7 @@
-// Giải thích các câu lệnh
+Giải thích các câu lệnh
 
-a. git clone <url>: Lệnh này dùng để lấy code từ 1 repo đã có sẵn về máy tính cá nhân.
+a. git clone <url>: Tạo một bản sao (clone) của một kho lưu trữ từ xa về máy tính cá nhân.
 b. git branch <branch_name>: Lệnh này được sử dụng để  tạo một nhánh mới trong kho lưu trữ cục bộ của bạn.
 c. git checkout <branch_name>: Lệnh này dùng để chuyển đổi giữa các nhánh.
 d. git checkout -b <branch_name>: Đây là một lệnh tắt kết hợp hai hành động: tạo một nhánh mới và chuyển đổi sang nhánh đó ngay lập tức.
-e. git pull origin master: Lấy code từ nhánh master về máy tính cá nhân. Đảm bảo được đồng bộ và cập nhật với trạng thái mới nhất của nhánh master trên repo.
+e. git pull origin master: Lấy và hợp nhất các thay đổi từ nhánh `master` trên kho lưu trữ từ xa (`origin`) vào nhánh hiện tại của bạn.
