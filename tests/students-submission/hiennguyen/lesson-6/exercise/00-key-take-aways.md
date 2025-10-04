@@ -10,8 +10,7 @@ git clone <link repo> <tên mới> // Tải và đặt lại tên
 
 ex:
 git clone git@github.com:better-bytes-academy/k18-practice.git
-git clone git@github.com:better-bytes-academy/k18-practice.git
-k18-practice-2
+git clone git@github.com:better-bytes-academy/k18-practice.git k18-practice-2
 ```
 
 ## 2.push:
@@ -30,7 +29,7 @@ git push origin main
 - Khái niệm: lấy dữ liệu mới của nhánh cụ thể về cập nhật cho local
 
 ```
-git pull <remote_name><branch_name>
+git pull <remote_name> <branch_name>
 
 ex:
 git pull origin branchA
@@ -41,7 +40,7 @@ git pull origin branchA
 - **Stash**: lưu các công việc đang làm vào 1 vùng nhớ tạm
 - **Unstash**: lấy các công việc trong vùng nhớ tạm ra
 
-```ts
+```bash
 git stash // stash
 git stash push -m "message" // stash + mô tả của stash để dễ phân biệt sau này
 git stash save "message" // stash + mô tả của stash để dễ phân biệt sau này
@@ -136,7 +135,7 @@ age = "30"; // err: ts báo không thể gán chuỗi cho số
 ```ts
 interface Student {
   name: string;
-  age: nummber;
+  age: number;
 }
 let student: Student = { name: "Hien", age: 29 };
 ```
@@ -146,6 +145,10 @@ let student: Student = { name: "Hien", age: 29 };
 - Khái niệm: class trong ts giống js nhưng có thêm khai báo kiểu dữ liệu cho thuộc tính và phương thức
 
 ```ts
+interface Player {
+  name: string;
+}
+
 class Team {
   name: string;
   players: Player[];
