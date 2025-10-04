@@ -22,7 +22,7 @@ class Library {
     this.books.push({ title, quantity });
   }
 
-  findBook(title: string) {
+  findBook(title: string): Book | undefined {
     return this.books.find(
       (b) => b.title.toLowerCase() === title.toLowerCase()
     );
@@ -37,5 +37,3 @@ library.addBook("One Piece", 30);
 
 console.log(library);
 console.log(`Sách cần tìm là:`, library.findBook("doraemon"));
-
-

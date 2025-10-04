@@ -10,7 +10,7 @@ Yêu cầu:
 - Tạo một phương thức calculateTotal để tính tổng số tiền của đơn hàng. 
 */
 
-interface Items {
+interface Item {
   name: string;
   price: number;
   amount: number;
@@ -25,7 +25,7 @@ class Order {
   constructor(
     public orderId: string,
     public customerName: string,
-    public items: Items[] = []
+    public items: Item[] = []
   ) {}
 
   // thêm sản phẩm vào đơn hàng

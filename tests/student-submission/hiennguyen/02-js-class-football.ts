@@ -8,27 +8,27 @@ Yêu cầu:
 */
 
 interface Player {
-    name: string;
-    role: string;
+  name: string;
+  role: string;
 }
 class Team {
-    constructor (
-    public name: string,
-    public players: Player[] = [],
-    ) {}
+  constructor(public name: string, public players: Player[] = []) {}
 
-    addPlayer(name: string, role: string): void {
-        this.players.push({ name, role });
-    }
+  addPlayer(name: string, role: string): void {
+    this.players.push({ name, role });
+  }
 
-    listPlayers(){
-        console.log(`Danh sách các cầu thủ trong đội bóng: `,this.players);
-    };
+  listPlayers(): void {
+    console.log(`Danh sách các cầu thủ trong đội bóng ${this.name}:`);
+    this.players.forEach((player) => {
+      console.log(`- ${player.name} (${player.role})`);
+    });
+  }
 }
 
 // test
-const team = new Team('Việt Nam');
-team.addPlayer('Nguyễn Văn A', 'Tiền đạo');
-team.addPlayer('Nguyễn Văn B', 'Thủ môn');
-team.addPlayer('Nguyễn Văn C', 'Hậu vệ');
+const team = new Team("Việt Nam");
+team.addPlayer("Nguyễn Văn A", "Tiền đạo");
+team.addPlayer("Nguyễn Văn B", "Thủ môn");
+team.addPlayer("Nguyễn Văn C", "Hậu vệ");
 team.listPlayers();
