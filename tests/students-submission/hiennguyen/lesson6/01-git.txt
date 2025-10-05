@@ -1,0 +1,6 @@
+Giải thích các câu lệnh:
+a. git clone <url>: Tải toàn bộ repo từ <url> về máy local
+b. git branch <branch_name>: tạo 1 nhánh mới với tên <branch_name>
+c. git checkout <branch_name>: chuyển sang nhánh <branch_name>
+d. git checkout -b <branch_name>: tạo một nhánh mới với tên <branch_name> và chuyển sang nhánh đó
+e. git pull origin master: lấy code mới nhất từ nhánh master trên remote origin và hợp nhất vào nhánh hiện tại. Lệnh này tương đương với việc chạy 'git fetch origin master' rồi 'git merge origin/master'
