@@ -7,14 +7,9 @@ interface Item {
 }
 
 class Order {
-    orderId: string;
-    customerName: string;
     items: Item[] = [];
     totalAmount: number = 0;
-
-    constructor(orderId: string, customerName: string) {
-        this.orderId = orderId;
-        this.customerName = customerName;
+    constructor(public readonly orderId: string, public readonly customerName: string) {
     }
     // Thêm sản phẩm vào đơn hàng
     addItem(item: Item): void {
@@ -26,10 +21,9 @@ class Order {
         // Kiểm tra sản phẩm đã tồn tại thì cộng lại số lượng
         const existItemIndex = this.items.findIndex(t => t.name === item.name);
         if (existItemIndex > -1) {
-            console.log(`The item's name "${item.name}" is existed.`);
+            console.log(`The item's name "${item.name}" already exists.`);
             const existItem = this.items[existItemIndex];
             existItem.amount += item.amount;
-            existItem.price += item.price;
             console.log(`The quantity of product " ${item.name}" is ${existItem.amount}.`);
         } else {
             this.items.push(item);

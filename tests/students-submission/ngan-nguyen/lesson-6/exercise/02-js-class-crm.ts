@@ -11,7 +11,7 @@ class Customer {
         this.phone = phone;
     }
     // Phương thức hiển thị thông tin khách hàng
-    displayInfor() {
+    displayInfo() {
         console.log(`---CUSTOMER INFORMATION---`);
         console.log(`ID: ${this.id}`);
         console.log(`Name: ${this.name}`);
@@ -28,10 +28,10 @@ class Customer {
         console.log(`Old Email: ${oldEmail}`);
         console.log(`New Email: ${this.email}`);
     }
-
 }
 // Kiểm tra hai phương thức hoạt động
 const customer = new Customer(10, "Nguyen Van A", "nguyenvana@gmail.com", "0987326722");
-customer.displayInfor();
+customer.displayInfo();
 customer.updateEmail("nguyenvana123@gmail.com");
-customer.displayInfor();
+// Kiểm tra email sau khi update
+customer.displayInfo();

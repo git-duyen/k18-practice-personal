@@ -7,12 +7,11 @@ interface Book {
 class Library {
     name: string;
     location: string;
-    books: Book[];
+    books: Book[] = [];
 
     constructor(name: string, location: string) {
         this.name = name;
         this.location = location;
-        this.books = [];
     }
 
     // Thêm sách vào thư viện
@@ -21,10 +20,9 @@ class Library {
         if (existBook) {
             console.log(`The book with id ${book.id} ("${book.title}") is existed.`);
             return;
-        } else {
-            this.books.push(book);
-            console.log(`The book "${book.title}" is added to library"`)
         }
+        this.books.push(book);
+        console.log(`The book "${book.title}" is added to library"`)
 
     }
 
@@ -36,7 +34,7 @@ class Library {
             console.log(`Book Not Found- Try to searching with other titles`);
         } else if (searchBooks.length === 1) {
             console.log(`${searchBooks.length} result is found with title "${title}"`);
-        } else if (searchBooks.length >= 1) {
+        } else {
             console.log(`${searchBooks.length} results are found with title "${title}"`);
         }
         return searchBooks;
