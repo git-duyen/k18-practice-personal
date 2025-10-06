@@ -18,11 +18,11 @@ class Library {
     addBook(book: Book): void {
         const existBook = this.books.some(b => b.id === book.id);
         if (existBook) {
-            console.log(`The book with id ${book.id} ("${book.title}") is existed.`);
+            console.log(`The book with id ${book.id} ("${book.title}") already exists.`);
             return;
         }
         this.books.push(book);
-        console.log(`The book "${book.title}" is added to library"`)
+        console.log(`The book "${book.title}" is added to library."`)
 
     }
 
