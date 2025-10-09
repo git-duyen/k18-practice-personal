@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Management System</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+        }
+
+        h1 {
+            color: #667eea;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-align: center;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #764ba2;
+            font-size: 1.8em;
+            margin: 40px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+
+        /* Form Styles */
+        #test-form {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.95em;
+        }
+
+        input[type="text"],
+        select {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1em;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        input[type="text"]:focus,
+        select:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        button {
+            padding: 12px 30px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-right: 10px;
+            margin-top: 10px;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-reset {
+            background: #e0e0e0;
+            color: #555;
+        }
+
+        .btn-reset:hover {
+            background: #d0d0d0;
+            transform: translateY(-2px);
+        }
+
+        /* Table Styles */
+        #test-table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 0;
+            margin-bottom: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        #test-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+
+        #test-table th {
+            padding: 18px 15px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+
+        #test-table tbody tr {
+            background: white;
+            transition: all 0.3s ease;
+        }
+
+        #test-table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        #test-table tbody tr:hover {
+            background: #e8f4ff;
+            transform: scale(1.01);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.2);
+        }
+
+        #test-table td {
+            padding: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        /* Priority Badges */
+        .priority-high {
+            color: #dc3545;
+            font-weight: 700;
+        }
+
+        .priority-high::before {
+            content: "🔴 ";
+        }
+
+        .priority-medium {
+            color: #fd7e14;
+            font-weight: 600;
+        }
+
+        .priority-medium::before {
+            content: "🟡 ";
+        }
+
+        .priority-low {
+            color: #28a745;
+            font-weight: 600;
+        }
+
+        .priority-low::before {
+            content: "🟢 ";
+        }
+
+        /* Status Badges */
+        .status-passed,
+        .status-running,
+        .status-failed,
+        .status-pending {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .status-passed {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-running {
+            background: #d1ecf1;
+            color: #0c5460;
+            animation: pulse 2s infinite;
+        }
+
+        .status-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        .status-pending {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.6; }
+        }
+
+        /* Action Buttons */
+        .btn-edit {
+            background: #17a2b8;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-edit:hover {
+            background: #138496;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(23, 162, 184, 0.3);
+        }
+
+        .btn-delete {
+            background: #dc3545;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-delete:hover {
+            background: #c82333;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(220, 53, 69, 0.3);
+        }
+
+        .btn-run {
+            background: #28a745;
+            color: white;
+            padding: 8px 16px;
+            font-size: 0.9em;
+        }
+
+        .btn-run:hover {
+            background: #218838;
+            transform: translateY(-2px);
+            box-shadow: 0 3px 10px rgba(40, 167, 69, 0.3);
+        }
+
+        /* Test Execution Section */
+        .test-execution {
+            margin-top: 40px;
+        }
+
+        .result-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            border-left: 5px solid #28a745;
+        }
+
+        .result-card h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.5em;
+        }
+
+        .test-type {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .steps {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .steps h4 {
+            color: #764ba2;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+        }
+
+        .steps ol {
+            margin-left: 20px;
+        }
+
+        .steps li {
+            margin-bottom: 10px;
+            line-height: 1.6;
+            color: #555;
+        }
+
+        .result {
+            margin-top: 20px;
+            font-size: 1.1em;
+        }
+
+        .result strong {
+            color: #28a745;
+            font-size: 1.2em;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+            }
+
+            h2 {
+                font-size: 1.4em;
+            }
+
+            #test-table {
+                font-size: 0.9em;
+            }
+
+            #test-table th,
+            #test-table td {
+                padding: 10px 8px;
+            }
+
+            button {
+                padding: 8px 16px;
+                font-size: 0.9em;
+                margin-bottom: 5px;
+            }
+        }
+
+        /* Scrollbar Styles */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 10px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #764ba2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Test Case Management</h1>
+        
+        <!-- Form tạo test case -->
+        <form id="test-form" action="/submit" method="post">
+            <div class="form-group">
+                <label for="testName">Test Case Name:</label>
+                <input type="text" id="testName" name="testName" placeholder="Enter test name">
+            </div>
+            
+            <div class="form-group">
+                <label for="testType">Testing Type:</label>
+                <select id="testType" name="testType">
+                    <option value="blackbox">Black Box Testing</option>
+                    <option value="whitebox">White Box Testing</option>
+                    <option value="integration">Integration Testing</option>
+                    <option value="regression">Regression Testing</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="priority">Priority:</label>
+                <input type="text" id="priority" name="priority" placeholder="High, Medium, or Low">
+            </div>
+            
+            <button type="submit" class="btn-submit">Create Test Case</button>
+            <button type="reset" class="btn-reset">Reset Form</button>
+        </form>
+
+        <!-- Bảng danh sách test cases -->
+        <h2>📋 Test Cases List</h2>
+        <table id="test-table">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Test Name</th>
+                    <th>Type</th>
+                    <th>Priority</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr data-test-id="TC001">
+                    <td>TC001</td>
+                    <td>Login Validation</td>
+                    <td>Black Box Testing</td>
+                    <td class="priority-high">High</td>
+                    <td><span class="status-passed">Passed</span></td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-run">Run Test</button>
+                    </td>
+                </tr>
+                <tr data-test-id="TC002">
+                    <td>TC002</td>
+                    <td>Code Coverage Analysis</td>
+                    <td>White Box Testing</td>
+                    <td class="priority-medium">Medium</td>
+                    <td><span class="status-running">Running</span></td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-run">Run Test</button>
+                    </td>
+                </tr>
+                <tr data-test-id="TC003">
+                    <td>TC003</td>
+                    <td>API Integration Test</td>
+                    <td>Integration Testing</td>
+                    <td class="priority-high">High</td>
+                    <td><span class="status-failed">Failed</span></td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-run">Run Test</button>
+                    </td>
+                </tr>
+                <tr data-test-id="TC004">
+                    <td>TC004</td>
+                    <td>Smoke Test Suite</td>
+                    <td>Regression Testing</td>
+                    <td class="priority-low">Low</td>
+                    <td><span class="status-pending">Pending</span></td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-run">Run Test</button>
+                    </td>
+                </tr>
+                <tr data-test-id="TC005">
+                    <td>TC005</td>
+                    <td>Boundary Value Testing</td>
+                    <td>Black Box Testing</td>
+                    <td class="priority-medium">Medium</td>
+                    <td><span class="status-passed">Passed</span></td>
+                    <td>
+                        <button class="btn-edit">Edit</button>
+                        <button class="btn-delete">Delete</button>
+                        <button class="btn-run">Run Test</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Test execution section -->
+        <div class="test-execution">
+            <h2>✅ Test Execution Results</h2>
+            <div class="result-card">
+                <h3>TC001: Login Validation</h3>
+                <p class="test-type">Type: Black Box Testing</p>
+                <div class="steps">
+                    <h4>Test Steps:</h4>
+                    <ol>
+                        <li>Navigate to login page</li>
+                        <li>Enter valid credentials</li>
+                        <li>Click submit button</li>
+                        <li>Verify successful login</li>
+                    </ol>
+                </div>
+                <p class="result">Result: <strong>PASSED ✓</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
