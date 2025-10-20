@@ -1,7 +1,10 @@
 import { test } from '@playwright/test';
 
 test('Demo playwright selector', async ({ page }) => {
-    await page.goto("https://material.playwrightvn.com/01-xpath-register-page.html");
+    await page.goto("https://material.playwrightvn.com/01-xpath-register-page.html", {
+        referer: "https://google.com",
+        waitUntil: "domcontentloaded"
+    });
     const title = await page.locator("//h1[@id='self']").textContent();
     const title2 = await page.getByRole("heading", { name: "User Registration" }).textContent();
     
