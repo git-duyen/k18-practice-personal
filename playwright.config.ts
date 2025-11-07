@@ -29,17 +29,35 @@ export default defineConfig({
     // baseURL: 'http://localhost:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
+    trace: 'on',
     headless: false,
-    video: 'on',
+    // video: 'on',
+
+    // // Emulates the browser locale.
+    // locale: 'en-GB',
+
+    // // Emulates the browser timezone.
+    // timezoneId: 'Europe/Paris',
+    permissions: ['notifications', 'microphone', 'geolocation'],
+
   },
 
   /* Configure projects for major browsers */
   projects: [
     {
       name: 'chromium',
-      use: { ...devices['Desktop Chrome'] },
+      use: {
+        ...devices['Desktop Chrome'],
+        // viewport: { width: 400, height: 400 },
+      },
     },
+
+    // {
+    //   name: 'Mobile Safari',
+    //   use: {
+    //     ...devices['iPad (gen 5)'],
+    //   },
+    // }
 
     // {
     //   name: 'firefox',
