@@ -1,0 +1,15 @@
+//
+# Di chuyển về nhánh main
+git checkout main
+
+# Tạo và chuyển sang nhánh mới
+git checkout -b feat/lesson-6-exercises-<name>
+
+# git clone < url> tên 
+tải một bản sao hoàn chỉnh của một dự án (Repository) từ trên mạng (GitHub, GitLab, Bitbucket...) về máy tính cá nhân
+
+#git branch <branch_name> 
+được sử dụng để tạo một nhánh mới từ vị trí hiện tại mà bạn đang đứng.
+
+# git pull origin master 
+là cách để bạn cập nhật những thay đổi mới nhất từ nhánh chính (master) ở trên máy chủ (Remote) về máy tính cá nhân của bạn (Local)
