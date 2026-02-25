@@ -1,0 +1,11 @@
+1. Cấu hình git
+Trước khi làm việc với Git , config 
+git config --golbal user.name
+git config --golbal user.email
+git config --golbal init.defaultBranch main
+2. Cách commit
+git init 
+git remote add origin <url>
+git add.
+git commit -m "message"
+git push origin main
