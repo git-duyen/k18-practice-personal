@@ -1,0 +1,13 @@
+1. git clone <url> 
+-url : link repo
+-Lấy code từ 1 repo đã có sẵn về máy tính cá nhân
+-Có thể đặt lại tên cho thư mục clone về : git clone <url> <tên mới>
+2. git branch <branch_name>
+- tạo 1 nhánh mới trong git
+-chỉ tạo chứ không chuyển sang nhánh
+3. git checkout <branch_name> 
+-checkout sang nhánh đó 
+4. git checkout -b <branch_name>
+- Tạo nhánh và chuyển sang nhánh đó
+5. git pull origin master 
+- pull code từ master về local
