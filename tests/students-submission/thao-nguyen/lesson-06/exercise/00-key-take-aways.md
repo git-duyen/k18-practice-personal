@@ -77,3 +77,7 @@ tạo PR
        }
      }
      
+Note : some problems
+- quay lại trước khi pull : chạy git reflog
+-quay lại pull trước : git reset --hard HEAD@{1} 
+1 là thứ tự, tên HEAD
