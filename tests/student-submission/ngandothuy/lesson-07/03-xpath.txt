@@ -1,0 +1,35 @@
+ancestor: Chọn tất cả tổ tiên (cha mẹ, ông bà, ...) của nút hiện tại
+--vd 01--
+<div id="grandparent1">
+    <div id="parent1"></div>
+</div>
+
+--vd 02--
+<div id="parent2">...</div>
+<div id="grandparent2">...</div>
+<div id="great-grandparent2">...</div>
+
+
+--vd 03--
+<div id="grandparent3">...</div>
+<div id="parent3"></div>
+
+
+ancestor-or-self: Chọn tất cả tổ tiên và chính nút hiện tại
+--vd 01--
+<div id="grandparent1">..</div>
+<div id="parent1">..</div>
+<div id="child1">...</div>
+    
+
+
+-- vd 02--
+<div id="great-grandparent2">...</div>
+<div id="grandparent2">...</div>
+<div id="parent2">...</div>
+
+  
+
+--vd 03--
+<div id="grandparent3">...</div>
+<div id="parent3">...</div>

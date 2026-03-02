@@ -1,0 +1,31 @@
+descendant: Chọn tất cả hậu duệ (con, cháu, ...) của nút hiện tại
+
+--vd01--
+<div id="child1">Nội dung 1</div>
+<div id="child2">Nội dung 2</div>
+
+--vd02--
+<span id="child2-1">Nội dung 2-1</span>
+<span id="child2-2">Nội dung 2-2</span>
+
+
+--vd03--
+<p id="child3-1">Nội dung 3-1</p>
+<p id="child3-2">Nội dung 3-2</p>
+
+
+descendant-or-self: Chọn tất cả hậu duệ và chính nút hiện tại
+--vd01--
+<div id="parent1">...</div> 
+<div id="child1">Nội dung 1</div> 
+<div id="child2">Nội dung 2</div>
+
+
+--vd02--
+<span id="child2-1">Nội dung 2-1</span>
+<span id="child2-2">Nội dung 2-2</span>
+
+
+--vd03--
+<p id="child3-1">Nội dung 3-1</p>
+<p id="child3-2">Nội dung 3-2</p>
