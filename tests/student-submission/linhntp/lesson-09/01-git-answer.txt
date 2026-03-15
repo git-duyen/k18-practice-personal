@@ -1,0 +1,25 @@
+1. git rebase main:
+- Lệnh này dùng để đưa các commit mới nhất từ nhánh main vào nhánh hiện tại bằng cách "di chuyển" các commit của nhánh hiện tại lên trên commit mới nhất của main. Điều này giúp lịch sử commit trở nên thẳng (linear) và dễ đọc hơn.
+
+2. git merge feature/A:
+- Lệnh này dùng để gộp (merge) toàn bộ thay đổi từ nhánh feature/A vào nhánh hiện tại. Nếu có commit khác nhau giữa hai nhánh, Git sẽ tạo một merge commit để kết hợp lịch sử của hai nhánh lại với nhau.
+
+3. Fast-forward merge:
+- Xảy ra khi nhánh hiện tại không có commit mới nào kể từ khi tạo nhánh feature. Khi đó Git chỉ cần "di chuyển con trỏ" của nhánh chính đến commit mới nhất của nhánh feature, không tạo thêm merge commit.
+
+Ví dụ:
+main: A --- B
+feature:      C --- D
+
+Sau khi merge:
+main: A --- B --- C --- D
+
+4. Three-way merge:
+- Xảy ra khi cả hai nhánh đều có commit mới sau khi tách nhánh. Git cần dùng 3 điểm để merge: commit chung gần nhất (common ancestor), commit của nhánh hiện tại, và commit của nhánh được merge. Khi đó Git sẽ tạo một merge commit mới.
+
+Ví dụ:
+main:    A --- B --- E
+              \
+feature:       C --- D
+
+Sau khi merge sẽ tạo thêm 1 merge commit để kết hợp lịch sử hai nhánh.
