@@ -1,0 +1,15 @@
+1. Cấu trúc DOM cơ bản của 1 trang wbe bao gồm các thẻ: <html></html>, <head></head>, <body></body> <title>, các thẻ <div></div>, <p></p>, 
+<link><form></form>...
+
+2. Cấu trúc html của 1 bảng:
+<table>
+    <thead>
+        <tr>
+            <th></th>
+        </tr>
+    <tbody>
+        <tr>
+            <td></td>
+        </tr>
+    </tbody>
+</table>

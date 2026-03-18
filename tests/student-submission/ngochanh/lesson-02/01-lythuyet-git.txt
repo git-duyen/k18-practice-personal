@@ -1,0 +1,5 @@
+Bai 1:
+- git init: khởi tạo repo ở local
+- git add <file_name>: chuyển 1 file có trong vùng working directory sang vùng staging
+- git add .: chuyển tất cả các file trong vùng working directory sang vùng staging
+- git commit "message": chuyển tất cả các file ở staging sang repository với nội dung "message"
