@@ -1,0 +1,6 @@
+VD1: //div[@id="child1"]/ancestor::div
+VD2: //span[@id="child2"]/ancestor::div
+VD3: //p[@id="child3"]/ancestor::div
+VD4:  //div[@id='child1']/ancestor-or-self::div
+VD5: //span[@id='child2']/ancestor-or-self::div
+VD6: //p[@id='child3']/ancestor-or-self::div

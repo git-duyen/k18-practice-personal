@@ -1,0 +1,6 @@
+VD1: //div[@id='current1']/preceding::div
+VD2: //span[@id='current2']/preceding::div
+VD3: //p[@id='current3']/preceding::span
+VD4: //div[@id='current1']/preceding-sibling::div
+VD5: //span[@id='current2']/preceding-sibling::span
+VD6: //p[@id='current3']/preceding-sibling::p

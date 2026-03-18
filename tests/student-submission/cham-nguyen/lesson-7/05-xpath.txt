@@ -1,0 +1,6 @@
+VD1: //div[@id='current1']/following::div
+VD2: //span[@id='current2']/following::div
+VD3: //p[@id='current3']/following::span
+VD4: //div[@id='current1']/following-sibling::div
+VD5: //span[@id='current2']/following-sibling::span
+VD6: //p[@id='current3']/following-sibling::p

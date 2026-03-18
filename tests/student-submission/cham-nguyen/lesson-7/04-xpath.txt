@@ -1,0 +1,8 @@
+Chọn tất cả hậu duệ (con, cháu, ...) của nút hiện tại:
+VD1: //div[@id='parent1']/descendant::div
+VD2: //div[@id='grandparent2']/descendant::*
+VD3: //div[@id='grandparent3']/descendant::*
+VD4: //div[@id='parent1']/descendant-or-self::div
+VD5: //div[@id='grandparent2']/descendant-or-self::*
+VD6: //div[@id='grandparent3']/descendant-or-self::*
+
