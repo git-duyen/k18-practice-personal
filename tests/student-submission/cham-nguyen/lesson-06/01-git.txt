@@ -1,0 +1,5 @@
+a. git clone <url>: clone 1 remote repository về máy
+b. git branch <branch_name>: tạo branch mới có tên <branch_name>
+c. git checkout <branch_name>: switch sang nhánh có tên <branch_name>
+d. git checkout -b <branch_name>: tạo branch mới đồng thời switch sang branch đó luôn
+3. git pull origin master: kéo code từ branch master về local
