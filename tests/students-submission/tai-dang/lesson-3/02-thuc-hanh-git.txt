@@ -1,0 +1,72 @@
+a. Tạo 3 file: file1, file2, file3
+- Local: file1, file2, file3
+- Working directory:
+- Staging:
+- Repository:
+
+b. Chạy lệnh: git init
+- Local:
+- Working directory: file1, file2, file3
+- Staging:
+- Repository:
+
+c. Chạy lệnh: git commit -m "init project"
+- Kết quả: không tạo được commit vì chưa có gì trong staging (nothing to commit)
+- Local:
+- Working directory: file1, file2, file3
+- Staging:
+- Repository:
+- Commit: chưa có
+
+d. Chạy lệnh: git add file1
+- Local:
+- Working directory: file2, file3
+- Staging: file1
+- Repository:
+- Commit: chưa có
+
+e. Chạy lệnh: git commit -m "add file"
+- Local:
+- Working directory: file2, file3
+- Staging:
+- Repository: file1
+- Commit:
+  1. add file
+
+f. Chạy lệnh: git add .
+- Git chỉ đưa các file chưa được commit vào staging, nên file2 và file3 được add; file1 không đổi nên không có gì mới để stage
+- Local:
+- Working directory:
+- Staging: file2, file3
+- Repository: file1
+- Commit:
+  1. add file
+
+g. Chạy lệnh: git restore --staged file2
+- Local:
+- Working directory: file2
+- Staging: file3
+- Repository: file1
+- Commit:
+  1. add file
+
+h. Chạy lệnh: git commit -m "add all files"
+- Thực tế chỉ commit file3, vì file2 đã bị bỏ khỏi staging ở bước g
+- Local:
+- Working directory: file2
+- Staging:
+- Repository: file1, file3
+- Commit:
+  1. add file
+  2. add all files
+
+i. Chạy lệnh: git reset HEAD~1
+- Đây là mixed reset mặc định: bỏ commit gần nhất khỏi lịch sử hiện tại, giữ thay đổi của commit đó trong working directory
+- Commit "add all files" bị bỏ khỏi nhánh hiện tại
+- file3 quay trở lại working directory; file2 vẫn ở working directory
+- Local:
+- Working directory: file2, file3
+- Staging:
+- Repository: file1
+- Commit:
+  1. add file

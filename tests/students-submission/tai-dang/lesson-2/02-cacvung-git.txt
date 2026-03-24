@@ -1,0 +1,5 @@
+b. lệnh git init không hoạt động nữa do repo này đã git init trước đó thành Git repo rồi
+c. không chạy được do chưa add file vô vùng stage
+d. không add được do sai folder path
+e. không commit được do sai từ d
+f. không commit được
