@@ -1,0 +1,6 @@
+a. file1,2,3: vùng local (folder máy cá nhân)
+b. file 1,2,3: vùng working area
+c. file 1,2,3: vùng working area
+d. file 2,3: vùng working area | file 1: vùng staging
+e. file 2,3: vùng working area | file 1: repository
+f. file 2,3: vùng working area | file 1: repository

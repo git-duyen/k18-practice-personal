@@ -1,0 +1,4 @@
+git init : Khởi tạo repo trên máy cá nhân, tạo thành vùng working directory
+git add <file name>: Di chuyển file được lựa chọn vào vùng staging area
+git add. : Di chuyển tất cả các file còn lại vào vùng staging area
+git commit -m "message': Di chuyển tất cả các file trong vùng staging area vào repository và tạo thành một phiên bản (commit) với tiêu đề là nội dung "message"

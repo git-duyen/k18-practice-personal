@@ -1,0 +1,53 @@
+a: Tạo 03 file: file1, file2,file3
+- Local:file1, file2,file3
+- Working directory:
+- Staging:
+- Repository:
+
+b: git init
+- Local:
+- Working directory:file1, file2,file3
+- Staging:
+- Repository:
+
+c: git commit -m"init project"
+- Local:
+- Working directory:file1, file2,file3
+- Staging:
+- Repository:
+
+d: git add file1
+- Local:
+- Working directory: file2,file3
+- Staging:file1
+- Repository:
+
+e: git commit -m"add file"
+- Local:
+- Working directory:file2,file3
+- Staging:
+- Repository: file1
+
+f: git add.
+- Local:
+- Working directory:
+- Staging: file2,file3
+- Repository: file1
+
+g: git restore --staged file2
+- Local:
+- Working directory:, file2
+- Staging:file3
+- Repository:file1
+
+h: git commit -m"add all files"
+- Local:
+- Working directory:, file2
+- Staging:
+- Repository:file1,file3
+
+i: git reset HEAD~1
+- Local:
+- Working directory:file2,file3
+- Staging:
+- Repository:file1

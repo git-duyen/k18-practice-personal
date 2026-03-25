@@ -1,0 +1,21 @@
+1.Cấu trúc DOM cơ bản của một trang web gồm 03 phần: thẻ gốc <html>, phần <head> chứa metadata và phần <body> chứa nhiều loại thẻ html: <p>, <li>,..
+Mô tả theo kiểu sơ đồ tree
+html
+--head
+--body
+---header
+---p
+---footer
+
+2. Cấu trúc html của một table. Mô tả theo tree
+table
++caption
++thread
+    +tr
+        +th
++tbody
+    +tr
+        +td
++tfoot
+    +tr
+        +td
