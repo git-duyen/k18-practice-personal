@@ -1,0 +1,7 @@
+lệnh ' git commit --amend ' đưa commit gần nhất vào giao diện VIM để sửa đổi
+
+lệnh ' git commit --amend -m"message" ' dùng để sửa đổi commit gần nhất và đổi tên commit 
+
+lệnh ' git restore --staged <file> ' dùng để đưa <file> từ vùng staging về vùng working directory
+
+lệnh ' git reset HEAD~1 ' dùng để trả về 1 commit gần nhất và đưa các file trong commit đó về Working directory

@@ -1,0 +1,14 @@
+Tạo folder mới
+a. Tạo 3 file: file1, file2, file3
+-> file1, file2, file3 hiện nằm trong vùng local của máy tính
+b. Chạy lệnh: git init
+-> tạo ra 3 vùng working directory, staging area, repository
+-> các file1, file2, file3 hiện nằm ở vùng working directory
+c.  Chạy lệnh: git commit -m "init project"
+-> git không thể chạy lệnh commit vì chưa có file nào được add vào vùng staging area
+d. Chạy lệnh: git add file1
+-> đưa file1 từ vùng working directory vào vùng staging area
+e. Chạy lệnh: git commit -m "add file1"
+-> tạo 1 phiên bản "add file1" đưa file1 từ vùng staging area vào vùng repository
+f. Chạy lệnh: git commit -m "add file"
+-> git không thể chạy lệnh commit vì chưa có file nào được add vào vùng staging area
