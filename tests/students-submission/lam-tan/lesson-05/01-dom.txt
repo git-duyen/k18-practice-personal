@@ -1,0 +1,11 @@
+1. Khi vào một website, ta nhìn thấy website dưới dạng: các khối, các test, các hình ảnh, các liên kết, các ô input.
+
+2. 
+| Thẻ mở  | Thuộc tính |   | Giá trị của thuộc tính |   | Text | Thẻ đóng |
+|---------|------------|---|------------------------|---|------|----------|
+| <option | value      | = | "lao"                  | > | Lao  | </option>|
+
+ngoài ra còn có các thẻ tự đóng:
+<img src="img.jpg" alt="Image description"/>
+<br/>
+<hr/>

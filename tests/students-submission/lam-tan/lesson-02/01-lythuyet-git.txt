@@ -1,0 +1,4 @@
+git init : chuyển file từ Local -> Working Directory tạo ra git Repository (3 vùng)
+git add <file_name> : thêm file từ Working Directory -> Staging Area
+git add . : thêm tất cả các file từ Working Directory -> Staging Area
+git commit -m "message": đưa file từ Staging Area -> Repository
