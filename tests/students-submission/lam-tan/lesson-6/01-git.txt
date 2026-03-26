@@ -1,0 +1,9 @@
+a. git clone <url>: dùng để lấy dự án git từ trên web về máy local
+
+b. git branch <branch_name>: dùng để tạo nhánh mới
+
+c. git checkout <branch_name>: dùng để di chuyển sang nhánh có sẵn
+
+d. git checkout -b <branch_name>: dùng để tạo và di chuyển sang nhánh mới tạo
+
+e. git pull origin master: dùng để lấy code từ nhánh master trên GitHub(origin) về nhánh local 
