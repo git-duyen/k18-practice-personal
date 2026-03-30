@@ -1,0 +1,13 @@
+a. git clone <url> dùng để lấy code từ 1 repo có sẵn về mảy tính cá nhân
+
+
+b. git branch <branch_name> dùng để tạo 1 nhánh mới với tên <branch_name> có nội dung giống với nhánh hiện tại đang đứng
+
+
+c. git checkout <branch_name> dùng để chuyển working directory hiện tại sang một nhánh <branch_name>
+
+
+d. git checkout -b <branch_name> dùng để tạo nhánh mới với tên <branch_name> và chuyển sang nhánh đó
+
+
+e. git pull origin master dùng để lấy các commit từ nhánh master của kho lưu trữ từ xa origin, sau đó hợp nhất nhánh origin/master vào nhánh đang đứng
