@@ -1,0 +1,9 @@
+a. git clone <url>: clone git source code về
+b. git branch <branch_name>: tạo git branch
+c. git checkout <branch_name>: Dùng để chuyển sang một branch đã tồn tại
+    - Không tạo mới
+    - Chỉ “nhảy” sang branch đó
+d. git checkout -b <branch_name>: Dùng để tạo branch mới và chuyển sang luôn
+    - Tạo branch mới từ branch hiện tại
+    - Sau đó tự động checkout sang branch đó
+e. git pull origin master: pull source code từ nhánh master về master local của mình
