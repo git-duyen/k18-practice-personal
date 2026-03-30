@@ -1,0 +1,4 @@
+lệnh 'git init' dùng để khởi tạo gi, tạo ra 3 vùng working directory, staging area, repository và đưa toàn bộ các file trong thư mục vào vùng working directory
+lệnh 'git add <file_name>', để thêm file <file_name> vào vùng staging area
+lệnh 'git add .' dùng để thêm toàn bộ file (chưa thêm) vào vùng staging area
+lệnh 'git commit -m "message"' tạo ra 1 phiên bản với tên phiên bản là message, đưa các file trong vùng staging area hiện có vào vùng repository
