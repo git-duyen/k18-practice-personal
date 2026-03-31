@@ -36,7 +36,7 @@ interface Player {
 // // teamA.addPlayer({ name: "Le Van D", position: "Hậu vệ", playerNumber: 12 });
 // teamA.listPlayers();
 
-class footballTeam {
+class FootballTeam {
     name: string;
     players: Player[];
 
