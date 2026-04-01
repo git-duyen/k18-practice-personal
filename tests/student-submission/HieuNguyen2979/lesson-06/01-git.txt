@@ -1,0 +1,5 @@
+'Git clone <url>' - Lấy code từ repo về máy local
+'Git branch <branch_name> - 'Git branch <branch_name>' - Tạo một nhánh mới dựa trên commit hiện tại
+'Git checkout <branch_name> - Chuyển sang branch khác
+'Git checkout -b <branch_name> - Tạo branch mới và chuyển sang thao tác tại branch vừa
+'Git pull origin master' - 'Git pull origin master' - Lấy thay đổi từ nhánh master của remote origin và hợp nhất vào nhánh hiện tại
