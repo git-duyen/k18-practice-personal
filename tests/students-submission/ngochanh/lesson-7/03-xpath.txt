@@ -1,0 +1,30 @@
+ancestor:
+- VD1: 
+<div id="grandparent1"></div>
+<div id="parent1"></div>
+
+- VD2:
+<div id="great-grandparent2"></div>
+<div id="grandparent2"></div>
+<div id="parent2"></div>
+
+- VD3:
+<div id="grandparent3">
+<div id="parent3">
+
+ancestor-or-self:
+- VD1: 
+<div id="grandparent1"></div>
+<div id="parent1"></div>
+<div id="child1">Nội dung 1</div>
+
+- VD2: 
+<div id="great-grandparent2"></div>
+<div id="grandparent2"></div>
+<div id="parent2"></div>
+<span id="child2">Nội dung 2</span>
+
+- VD3: 
+<div id="grandparent3"></div>
+<div id="parent3"></div>
+<p id="child3">Nội dung 3</p>
