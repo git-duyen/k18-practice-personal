@@ -9,27 +9,18 @@ const NAME = 'tai';
 const USERNAME = `${COURSE}-${NAME}${generateRandomString(3)}`;
 const WEBSITE = 'https://pw-practice-dev.playwrightvn.com/wp-admin';
 
+let createdUsername: string | null = null;
+
 test.beforeEach(async ({ page }) => {
     await page.goto(`${WEBSITE}`);
+    createdUsername = null;
 });
 test.afterEach(async ({ page }) => {
-    // đăng nhập vào admin account và xóa user vừa tạo
-    await page.locator(`//li[@id='wp-admin-bar-my-account']/a[@role='menuitem']`).hover();
-    await expect(page.locator(`//li[@id='wp-admin-bar-logout']/a`)).toBeVisible();
-    await page.locator(`//li[@id='wp-admin-bar-logout']/a`).click();
-    logIn(page, VALID_USERNAME, VALID_PASSWORD);
-    await page.locator(`//li[@id='menu-users']//div[text()='Users']//parent::a`).click();
-    // Màn hình user hiển thị: Heading "Users" visible
-    await expect(page.locator("//*[@class='wp-heading-inline']")).toBeVisible();
-    await page.locator(`#user-search-input`).fill(USERNAME);
-    await page.locator(`#search-submit`).click();
-    await page.locator(`//a[contains(text(), '${USERNAME}')]`).hover();
-    await page.locator(`//a[@class='submitdelete']`).click();
-    if (test.info().title.includes('editor')) {
-        await page.locator(`//input[@id='delete_option0']`).click();
+    if (createdUsername) {
+        await logout(page);
+        await loginAdmin(page);
+        await deleteUser(page, createdUsername);
     }
-    await page.locator(`//input[@value='Confirm Deletion']`).click();
-    await expect(page.locator('#message p')).toHaveText('User deleted.');
 });
 
 
@@ -69,6 +60,7 @@ test.describe('ACCOUNT - Account', () => {
         await test.step('Verify user created successfully', async () => {
             const successMessage = page.locator('#message');
             await expect(successMessage).toHaveText('New user created. Edit user');
+            createdUsername = USERNAME;
         });
         await test.step('Login with new account', async () => {
             // đăng xuất và đăng nhập lại với user vừa tạo
@@ -127,6 +119,7 @@ test.describe('ACCOUNT - Account', () => {
         await test.step('Verify user created successfully', async () => {
             const successMessage = page.locator('#message');
             await expect(successMessage).toHaveText('New user created. Edit user');
+            createdUsername = USERNAME;
         });
         await test.step('Login with new account', async () => {
             // đăng xuất và đăng nhập lại với user vừa tạo
@@ -152,6 +145,42 @@ test.describe('ACCOUNT - Account', () => {
     });
 
 });
+
+async function logout(page: Page) {
+    const menuButton = page.locator(`//li[@id='wp-admin-bar-my-account']/a[@role='menuitem']`);
+    const logOutButton = page.locator(`//li[@id='wp-admin-bar-logout']/a`);
+    await menuButton.hover();
+    await expect(logOutButton).toBeVisible();
+    await logOutButton.click();
+}
+
+async function loginAdmin(page: Page) {
+    await logIn(page, VALID_USERNAME, VALID_PASSWORD);
+}
+
+async function deleteUser(page: Page, username: string) {
+    // Điều hướng đến trang Users
+    await page.locator(`//li[@id='menu-users']//div[text()='Users']//parent::a`).click();
+    // Màn hình user hiển thị: Heading "Users" visible
+    await expect(page.locator("//*[@class='wp-heading-inline']")).toBeVisible();
+    
+    // Tìm kiếm user
+    await page.locator(`#user-search-input`).fill(username);
+    await page.locator(`#search-submit`).click();
+    
+    // Xóa user
+    await page.locator(`//a[contains(text(), '${username}')]`).hover();
+    await page.locator(`//a[@class='submitdelete']`).click();
+    
+    // Nếu là editor, chọn option xóa content
+    if (test.info().title.includes('editor')) {
+        await page.locator(`//input[@id='delete_option0']`).click();
+    }
+    
+    // Confirm deletion
+    await page.locator(`//input[@value='Confirm Deletion']`).click();
+    await expect(page.locator('#message p')).toHaveText('User deleted.');
+}
 
 async function logIn(page: Page, username: string, password: string) {
     const userName = page.getByLabel('Username or Email Address');
