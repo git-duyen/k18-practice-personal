@@ -1,0 +1,4 @@
+2.
+a. git rebase main: làm cho nhánh hiện tại như thể nó được tạo ra từ main mới nhất
+git merge feature/A: gộp toàn bộ thay đổi từ feature/A vào nhánh hiện tại đang đứng
+b.
