@@ -13,10 +13,10 @@ git rebase -i HEAD~(số lượng commit): git rebase -i HEAD~3
 
 **Selector:** CSS Selector, Playwright Selector
 Playwright Selector: hệ thống locator của Playwright để tìm và tương tác với các phần tử trên web
-page.getByRole()
-page.getByText()
-page.getByLabel()
+page.getByRole(): tìm element theo ARIA role (vai trò ngữ nghĩa của element)
+page.getByText(): tìm element theo text hiển thị trên trang
+page.getByLabel(): tìm input element thông qua text của <label> liên kết với nó
 page.getByPlaceholder()
 page.getByAltText()
 page.getByTitle()
-page.getByTestId()
+page.getByTestId(): mặc định dùng cho thuộc tính "data-testid"

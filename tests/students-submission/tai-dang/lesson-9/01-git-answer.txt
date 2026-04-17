@@ -1,4 +1,25 @@
 2.
+<<<<<<< Updated upstream
 a. git rebase main: làm cho nhánh hiện tại như thể nó được tạo ra từ main mới nhất
 git merge feature/A: gộp toàn bộ thay đổi từ feature/A vào nhánh hiện tại đang đứng
 b.
+=======
+a. 
+git rebase main: làm cho nhánh hiện tại như thể nó được tạo ra từ main mới nhất
+git merge feature/A: gộp toàn bộ thay đổi từ feature/A vào nhánh hiện tại đang đứng
+b.
+1. Fast-forward merge
+Xảy ra khi:
+- Nhánh đích không có commit mới riêng
+- Lịch sử chỉ là một đường thẳng
+- Git chỉ cần dời con trỏ branch tới commit mới nhất
+
+2. Three-way merge
+Xảy ra khi:
+- Hai nhánh đều đã phát triển riêng
+- Cả nhánh hiện tại và nhánh được merge đều có commit mới
+- Git phải so sánh 3 điểm:
+tổ tiên chung
+đầu nhánh hiện tại
+đầu nhánh được merge
+>>>>>>> Stashed changes
