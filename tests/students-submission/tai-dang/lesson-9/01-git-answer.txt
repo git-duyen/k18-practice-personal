@@ -1,9 +1,4 @@
 2.
-<<<<<<< Updated upstream
-a. git rebase main: làm cho nhánh hiện tại như thể nó được tạo ra từ main mới nhất
-git merge feature/A: gộp toàn bộ thay đổi từ feature/A vào nhánh hiện tại đang đứng
-b.
-=======
 a. 
 git rebase main: làm cho nhánh hiện tại như thể nó được tạo ra từ main mới nhất
 git merge feature/A: gộp toàn bộ thay đổi từ feature/A vào nhánh hiện tại đang đứng
@@ -22,4 +17,3 @@ Xảy ra khi:
 tổ tiên chung
 đầu nhánh hiện tại
 đầu nhánh được merge
->>>>>>> Stashed changes
