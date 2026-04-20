@@ -1,0 +1,15 @@
+2. Giải thích câu lệnh
+- git rebase main 
+---> Di chuyển toàn bộ các commit của bạn làm ở nhánh feature lên trên đỉnh của những commit mới nhất từ main, 
+---> Tích hợp các thay đổi từ main vào nhánh feature đang đứng hiện tại
+
+- git merge feature/A 
+---> Tích hợp các thay đổi từ nhánh features/A vào nhánh đang đứng hiện tại (thường là main)
+
+- merge strategy:
+    - fast-forward:
+        - Khi merge không tạo ra commit merge
+        - Xảy ra khi không có thay đổi nào trên nhánh main kể từ lúc tạo branch mới 
+    - three way merge: 
+        - Khi merge có tạo ra commit merge
+        - Xảy ra khi bạn muốn merge branch vào main mà lịch sử của 2 branch đã có sự khác nhau

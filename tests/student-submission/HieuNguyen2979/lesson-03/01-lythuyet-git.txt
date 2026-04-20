@@ -1,0 +1,4 @@
+git commit --amend : xoá commit gần nhất và thay thế bằng 01 commit mới
+git commit --amend -m <message>: Xoá commit gần nhất và thay thế bằng 01 commit mới có nội dung commit lf <message>
+git restore --staged <file> : Chuyển <file> từ vùng staging về vùng working
+git reset HEAD~1: xoá một commit tại vùng repository (xoá theo thứ tự)

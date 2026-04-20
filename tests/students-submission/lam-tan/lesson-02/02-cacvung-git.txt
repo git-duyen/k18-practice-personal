@@ -1,0 +1,35 @@
+a. Tạo 3 file fiel1, file2, file3
+- Local: fiel1, file2, file3
+- Working Directory:
+- Staging Area: 
+- Repository: 
+
+b. Chạy lệnh git init
+- Local: fiel1, file2, file3
+- Working Directory: fiel1, file2, file3
+- Staging Area: 
+- Repository: 
+
+c. Chạy lệnh git commit -m "init project" (Staging Area -> Repository)
+- Local: fiel1, file2, file3
+- Working Directory: fiel1, file2, file3
+- Staging Area: 
+- Repository: 
+
+d. Chạy lệnh git add file1
+- Local: fiel1, file2, file3
+- Working Directory: file2, file3
+- Staging Area: fiel1
+- Repository: 
+
+e. Chạy lệnh git commit -m "add file1" 
+- Local: fiel1, file2, file3
+- Working Directory: file2, file3
+- Staging Area: 
+- Repository: fiel1 (message: add file1)
+
+f. Chạy lệnh git commit -m "file" 
+- Local: fiel1, file2, file3
+- Working Directory: file2, file3
+- Staging Area: 
+- Repository: fiel1 (message: add file1)

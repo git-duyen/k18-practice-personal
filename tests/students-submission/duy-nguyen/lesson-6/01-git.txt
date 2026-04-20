@@ -1,0 +1,14 @@
+a. git clone <url>  
+--> Clone/sao chép repository cụ thể theo url trên GitHub về máy cá nhân (local)
+
+b. git branch <branch_name> 
+--> Tạo 1 nhánh mới với tên (tùy mình đặt tên <branch_name> là gì) từ nhánh hiện tại.
+
+c. git checkout <branch_name>   
+--> switch qua nhánh <branch_name> từ nhánh hiện tại
+
+d. git checkout -b <branch_name>    
+--> vừa tạo nhánh mới với tên mình đặt <branch_name> là gì và đồng thời switch qua nhánh mới này
+ 
+e. git pull origin master  
+ --> kéo/lấy code mới nhất từ nhánh master trên GitHub vế máy cá nhân (local)

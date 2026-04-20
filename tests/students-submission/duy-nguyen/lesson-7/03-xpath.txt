@@ -1,0 +1,97 @@
+ancestor
+Chọn tất cả tổ tiên (cha mẹ, ông bà, ...) của nút hiện tại:
+
+--------------
+Ví dụ 1
+HTML:
+<div id="grandparent1">
+    <div id="parent1">
+        <div id="child1">Nội dung 1</div>
+    </div>
+</div>
+
+XPath: //div[@id='child1']/ancestor::div
+==>
+<div id="grandparent1">
+<div id="parent1"> 
+
+--------------
+Ví dụ 2
+HTML:
+<div id="great-grandparent2">
+    <div id="grandparent2">
+        <div id="parent2">
+            <span id="child2">Nội dung 2</span>
+        </div>
+    </div>
+</div>
+
+XPath: //span[@id='child2']/ancestor::div
+==>
+<div id="great-grandparent2">
+<div id="grandparent2">
+<div id="parent2">
+
+--------------
+Ví dụ 3
+HTML:
+<div id="grandparent3">
+    <div id="parent3">
+        <p id="child3">Nội dung 3</p>
+    </div>
+</div>
+
+XPath: //p[@id='child3']/ancestor::div
+==>
+<div id="grandparent3">
+<div id="parent3">
+
+----------------------------
+ancestor-or-self
+Chọn tất cả tổ tiên và chính nút hiện tại:
+
+--------------
+Ví dụ 1
+HTML:
+<div id="grandparent1">
+    <div id="parent1">
+        <div id="child1">Nội dung 1</div>
+    </div>
+</div>
+
+XPath: //div[@id='child1']/ancestor-or-self::div
+==>
+<div id="grandparent1">
+<div id="parent1">
+<div id="child1">Nội dung 1</div>
+
+--------------
+Ví dụ 2
+HTML:
+<div id="great-grandparent2">
+    <div id="grandparent2">
+        <div id="parent2">
+            <span id="child2">Nội dung 2</span>
+        </div>
+    </div>
+</div>
+
+XPath: //span[@id='child2']/ancestor-or-self::div
+==>
+<div id="great-grandparent2">
+<div id="grandparent2">
+<div id="parent2">
+
+--------------
+Ví dụ 3
+HTML:
+<div id="grandparent3">
+    <div id="parent3">
+        <p id="child3">Nội dung 3</p>
+    </div>
+</div>
+
+XPath: //p[@id='child3']/ancestor-or-self::div
+==>
+<div id="grandparent3">
+<div id="parent3">
