@@ -5,7 +5,7 @@ nghiax là : chung lịch sử
 - **Three way merge** : khi merge có tạo ra commit merge, xảy ra khhi muốn merge branch vào main mà lịch sử của 2 branch này có sự khác nhau
 1.2 : rebase
 - cập nhật từ nhánh main vào nhánh feature , dựa theo time merge
-git re-base <tên nhánh>
+git rebase <tên nhánh>
 - Cách gom commit ( squash)
 git rebase -i HEAD <số commit> 
 Số commit : là số commit muốn gom lại
@@ -59,7 +59,7 @@ test ('demo getbytext', async ({ page }) => {
     await page.getByText('HocTest.Com').click();
     //await page.getByText('HocTest' , { exact: true }).click();
 
-= getByLable
+= getbyLable
 page.getbyLable (text, options)
 await page.getByLabel('Email address').fill(test@gmail.com')
  -getByPlaceholder
