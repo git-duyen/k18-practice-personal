@@ -68,7 +68,7 @@ interface User{
 //Type
 type User = {
     name: string;
-    age: string;
+    age: number;
 };
 ```
 ### Khác biệt chính
