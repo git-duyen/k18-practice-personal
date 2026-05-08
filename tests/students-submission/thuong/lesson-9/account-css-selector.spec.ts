@@ -17,19 +17,19 @@ test.describe("ACCOUNT - Account", async () => {
   } as User;
 
   const login = async (page: Page, user: User) => {
-    await page.locator("//input[@id='user_login']").fill(user.userName);
-    await page.locator("//input[@id='user_pass']").fill(user.passWord);
-    await page.locator("//input[@id='wp-submit']").click();
+    await page.locator("input#user_login").fill(user.userName);
+    await page.locator("input#user_pass").fill(user.passWord);
+    await page.locator("input#wp-submit").click();
   };
 
   const goToUserManagement = async (page: Page) => {
-    await page.locator("//li[@id='menu-users']").click();
+    await page.locator("li#menu-users").click();
 
     //Expected
     await expect(page.locator("h1")).toContainText("Users");
     await expect(
       page.locator(
-        "//a[@class='page-title-action' and contains(text(),'Add User')]",
+        "a.page-title-action:has-text('Add User')",
       ),
     ).toBeEnabled();
   };
@@ -37,65 +37,64 @@ test.describe("ACCOUNT - Account", async () => {
   const addUser = async (page: Page, user: User) => {
     await page
       .locator(
-        "//a[@class='page-title-action' and contains(text(),'Add User')]",
+        "a.page-title-action:has-text('Add User')",
       )
       .click();
 
-    await page.locator("//input[@id='user_login']").fill(user.userName);
-    await page.locator("//input[@id='email']").fill(user.email);
-    await page.locator("//input[@id='first_name']").fill(user.firstName);
-    await page.locator("//input[@id='last_name']").fill(user.lastName);
-    await page.locator("//input[@id='pass1']").fill(user.passWord);
+    await page.locator("input#user_login").fill(user.userName);
+    await page.locator("input#email").fill(user.email);
+    await page.locator("input#first_name").fill(user.firstName);
+    await page.locator("input#last_name").fill(user.lastName);
+    await page.locator("input#pass1").fill(user.passWord);
     await page
-      .locator("//select[@id='role']")
+      .locator("select#role")
       .selectOption({ label: user.role });
-    await page.locator("//input[@id='createusersub']").click();
+    await page.locator("input#createusersub").click();
 
     //Expected
-    const sucess = page.locator("//div[@id='message']");
+    const sucess = page.locator("div#message");
     await expect(sucess).toContainText("New user created.");
   };
 
   const deleteUser = async (page: Page, user: User) => {
     // Đi tới trang quản lý user
-    await page.locator("//li[@id='menu-users']").click();
+    await page.locator("li#menu-users").click();
 
     // Tìm và xóa
-    await page.locator("//input[@id='user-search-input']").fill(user.userName);
-    await page.locator("//input[@id='user-search-input']").press("Enter");
+    await page.locator("input#user-search-input").fill(user.userName);
+    await page.locator("input#user-search-input").press("Enter");
     await page.locator(`a:has-text("${user.userName}")`).hover();
-    await page.locator("//a[contains(text(), 'Delete')]").click();
+    await page.locator("a:has-text('Delete')").click();
 
     // Xác nhận xóa
-    const confirmDelete = page.locator("//label[text()='Delete all content.']");
+    const confirmDelete = page.locator("label:has-text('Delete all content.')");
     if (await confirmDelete.isVisible()) {
       await confirmDelete.click();
     }
-    await page.locator("//input[@id='submit']").click();
+    await page.locator("input#submit").click();
 
     // Verify kết quả xóa
-    await expect(page.locator("//div[@id='message']")).toContainText(
+    await expect(page.locator("div#message")).toContainText(
       "User deleted.",
     );
-    await page.locator("//input[@id='user-search-input']").fill(user.userName);
-    await page.locator("//input[@id='user-search-input']").press("Enter");
+    await page.locator("input#user-search-input").fill(user.userName);
+    await page.locator("input#user-search-input").press("Enter");
     await expect(
-      page.locator(`//a[contains(text(), '${user.userName}')]`),
+      page.locator(`a:has-text('${user.userName}')`),
     ).not.toBeVisible();
   };
 
   const logout = async (page: Page) => {
-    await page.locator("//a[contains(text(), 'Howdy, ')]").hover();
-    await page.locator("//a[contains(text(), 'Log Out')]").click();
-  };
-  
+  await page.locator("a:has-text('Howdy, ')").hover();
+  await page.locator("a:has-text('Log Out')").click();
+};
 
   test.beforeEach(async ({ page }) => {
     await test.step("Open page Playwright", async () => {
       await page.goto("https://pw-practice-dev.playwrightvn.com/wp-admin");
-      await page.locator("//input[@id='user_login']").fill(admin.userName);
-      await page.locator("//input[@id='user_pass']").fill(admin.passWord);
-      await page.locator("//input[@id='wp-submit']").click();
+      await page.locator("input#user_login").fill(admin.userName);
+      await page.locator("input#user_pass").fill(admin.passWord);
+      await page.locator("input#wp-submit").click();
     });
   });
 

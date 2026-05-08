@@ -17,85 +17,93 @@ test.describe("ACCOUNT - Account", async () => {
   } as User;
 
   const login = async (page: Page, user: User) => {
-    await page.locator("//input[@id='user_login']").fill(user.userName);
-    await page.locator("//input[@id='user_pass']").fill(user.passWord);
-    await page.locator("//input[@id='wp-submit']").click();
+    await page
+      .getByRole("textbox", { name: "Username or Email Address" })
+      .fill(user.userName);
+    await page.getByRole("textbox", { name: "Password" }).fill(user.passWord);
+    await page.getByRole("button", { name: "Log In" }).click();
   };
 
   const goToUserManagement = async (page: Page) => {
-    await page.locator("//li[@id='menu-users']").click();
+    await page.getByRole("link", { name: "Users", exact: true }).click();
 
     //Expected
-    await expect(page.locator("h1")).toContainText("Users");
     await expect(
-      page.locator(
-        "//a[@class='page-title-action' and contains(text(),'Add User')]",
-      ),
+      page.getByRole("heading", { name: "Users", level: 1 }),
+    ).toContainText("Users");
+    await expect(
+      page.getByRole("link", { name: "Add User" }).nth(1),
     ).toBeEnabled();
   };
 
   const addUser = async (page: Page, user: User) => {
-    await page
-      .locator(
-        "//a[@class='page-title-action' and contains(text(),'Add User')]",
-      )
-      .click();
+    await page.getByRole("link", { name: "Add User" }).nth(1).click();
 
-    await page.locator("//input[@id='user_login']").fill(user.userName);
-    await page.locator("//input[@id='email']").fill(user.email);
-    await page.locator("//input[@id='first_name']").fill(user.firstName);
-    await page.locator("//input[@id='last_name']").fill(user.lastName);
-    await page.locator("//input[@id='pass1']").fill(user.passWord);
     await page
-      .locator("//select[@id='role']")
-      .selectOption({ label: user.role });
-    await page.locator("//input[@id='createusersub']").click();
+      .getByRole("textbox", { name: "Username (required)" })
+      .fill(user.userName);
+    await page
+      .getByRole("textbox", { name: "Email (required)" })
+      .fill(user.email);
+    await page
+      .getByRole("textbox", { name: "First Name" })
+      .fill(user.firstName);
+    await page.getByRole("textbox", { name: "Last Name" }).fill(user.lastName);
+    await page.getByRole("textbox", { name: "Password" }).fill(user.passWord);
+    await page.getByLabel("Role").selectOption({ label: user.role });
+    await page.getByRole("button", { name: "Add User" }).click();
 
     //Expected
-    const sucess = page.locator("//div[@id='message']");
-    await expect(sucess).toContainText("New user created.");
+    await expect(
+      page.getByText("New user created.", { exact: false }),
+    ).toBeVisible();
   };
 
   const deleteUser = async (page: Page, user: User) => {
     // Đi tới trang quản lý user
-    await page.locator("//li[@id='menu-users']").click();
+    await page.getByRole("link", { name: "Users", exact: true }).click();
 
     // Tìm và xóa
-    await page.locator("//input[@id='user-search-input']").fill(user.userName);
-    await page.locator("//input[@id='user-search-input']").press("Enter");
-    await page.locator(`a:has-text("${user.userName}")`).hover();
-    await page.locator("//a[contains(text(), 'Delete')]").click();
+    await page
+      .getByRole("searchbox", { name: "Search Users" })
+      .fill(user.userName);
+    await page.getByRole("searchbox", { name: "Search Users" }).press("Enter");
+    await page.getByRole("link", { name: `${user.userName}` }).hover();
+    await page.getByRole("link", { name: "Delete" }).click();
 
     // Xác nhận xóa
-    const confirmDelete = page.locator("//label[text()='Delete all content.']");
+    const confirmDelete = page.getByText("Delete all content.");
     if (await confirmDelete.isVisible()) {
       await confirmDelete.click();
     }
-    await page.locator("//input[@id='submit']").click();
+    await page.getByRole("button", { name: "Confirm Deletion" }).click();
 
     // Verify kết quả xóa
-    await expect(page.locator("//div[@id='message']")).toContainText(
-      "User deleted.",
-    );
-    await page.locator("//input[@id='user-search-input']").fill(user.userName);
-    await page.locator("//input[@id='user-search-input']").press("Enter");
     await expect(
-      page.locator(`//a[contains(text(), '${user.userName}')]`),
-    ).not.toBeVisible();
+      page.getByText("User deleted.", { exact: false }),
+    ).toBeVisible();
+    await page
+      .getByRole("searchbox", { name: "Search Users" })
+      .fill(user.userName);
+    await page.getByRole("searchbox", { name: "Search Users" }).press("Enter");
+    await expect(page.getByText("No users found.")).toBeVisible();
   };
 
   const logout = async (page: Page) => {
-    await page.locator("//a[contains(text(), 'Howdy, ')]").hover();
-    await page.locator("//a[contains(text(), 'Log Out')]").click();
+    await page.getByText("Howdy, ", { exact: false }).hover();
+    await page.getByText("Log Out", { exact: true }).click();
   };
-  
 
   test.beforeEach(async ({ page }) => {
     await test.step("Open page Playwright", async () => {
       await page.goto("https://pw-practice-dev.playwrightvn.com/wp-admin");
-      await page.locator("//input[@id='user_login']").fill(admin.userName);
-      await page.locator("//input[@id='user_pass']").fill(admin.passWord);
-      await page.locator("//input[@id='wp-submit']").click();
+      await page
+        .getByRole("textbox", { name: "Username or Email Address" })
+        .fill(admin.userName);
+      await page
+        .getByRole("textbox", { name: "Password" })
+        .fill(admin.passWord);
+      await page.getByRole("button", { name: "Log In" }).click();
     });
   });
 
@@ -136,19 +144,24 @@ test.describe("ACCOUNT - Account", async () => {
         "Posts",
         "Media",
         "Pages",
-        "Comments",
         "Profile",
         "Tools",
       ];
+      
       for (const menu of visibleMenus) {
         await expect(
-          page.locator(".wp-menu-name").filter({ hasText: menu }),
+          page.getByRole("link", { name: menu, exact: true }),
         ).toBeVisible();
       }
+      await expect(
+        page.getByRole("link", { name: "Comments", exact: false }).nth(0),
+      ).toBeVisible();
+
       const hiddenMenus = ["Appearance", "Users", "Plugins"];
+
       for (const menu of hiddenMenus) {
         await expect(
-          page.locator(".wp-menu-name").filter({ hasText: menu }),
+          page.getByRole("link", { name: menu, exact: true }),
         ).toBeHidden();
       }
     });
@@ -181,7 +194,7 @@ test.describe("ACCOUNT - Account", async () => {
       const visibleMenus = ["Dashboard", "Profile"];
       for (const menu of visibleMenus) {
         await expect(
-          page.locator(".wp-menu-name").filter({ hasText: menu }),
+          page.getByRole("link", { name: menu, exact: true }),
         ).toBeVisible();
       }
       const hiddenMenus = [
@@ -193,9 +206,10 @@ test.describe("ACCOUNT - Account", async () => {
         "Comments",
         "Tools",
       ];
+
       for (const menu of hiddenMenus) {
         await expect(
-          page.locator(".wp-menu-name").filter({ hasText: menu }),
+          page.getByRole("link", { name: menu, exact: true }),
         ).toBeHidden();
       }
     });
