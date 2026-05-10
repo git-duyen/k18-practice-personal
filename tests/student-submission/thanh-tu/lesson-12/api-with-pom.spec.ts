@@ -1,7 +1,5 @@
-import { test, expect, request as playwrightRequest, APIRequestContext } from '@playwright/test';
+import { test, expect, request as requestContext, APIRequestContext } from '@playwright/test';
 import { CreateUserPayload, User, UserManagementApiPage } from './userManager.api.page';
-
-const baseURL = 'https://material.playwrightvn.com/api/user-management/v1';
 
 test.describe('Login success', () => {
   test('Login Admin', async ({ request }) => {
@@ -40,7 +38,7 @@ test.describe('Create user success', () => {
   };
 
   test.beforeAll(async () => {
-    apiContext = await playwrightRequest.newContext();
+    apiContext = await requestContext.newContext();
     userAPI = new UserManagementApiPage(apiContext);
 
     const loginRes = await userAPI.login('admin@example.com', 'password');
