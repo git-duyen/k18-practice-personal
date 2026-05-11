@@ -43,7 +43,7 @@ console.log(course); // => 'Full-stack QA'
 * Mở rộng built-in fixture (page, context, browser)
 * Nhóm test theo ngữ nghĩa thay vì common setup
 
-### Các Build-in Fixture
+### Các Built-in Fixture
 |Fixture|Type|Mô tả|
 |-----------|-----------------|-|
 |page       |Page             |Tạo một page riêng biệt cho test|
