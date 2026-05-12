@@ -12,7 +12,7 @@ type MaterialFixture = {
 export const test = base.extend<MaterialFixture>({
   materialPage: async ({ page }, use) => {
     const materialPage = new MaterialPage(page);
-    materialPage.openMaterialPage();
+    await materialPage.openMaterialPage();
     await expect(
       page.getByRole('heading', {
         name: 'Tài liệu học automation test',
