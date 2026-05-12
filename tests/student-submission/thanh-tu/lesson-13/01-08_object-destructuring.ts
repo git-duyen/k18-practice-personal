@@ -79,7 +79,7 @@ const product2 = {
 };
 
 const {
-  details: { model: prodcut2Model },
+  details: { model: product2Model },
 } = product2;
 
-console.log('Bài tập 8: ' + prodcut2Model);
+console.log('Bài tập 8: ' + product2Model);

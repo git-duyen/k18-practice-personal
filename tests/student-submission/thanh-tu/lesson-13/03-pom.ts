@@ -74,18 +74,21 @@ export class RegisterPage extends MaterialPage {
   }
 
   async checkHobbies(hobbies: string[]) {
+    // for (const hobby of hobbies) {
+    //   switch (hobby) {
+    //     case 'reading':
+    //       await this.page.locator(this.xpathHobbieReading).check();
+    //       break;
+    //     case 'traveling':
+    //       await this.page.locator(this.xpathHobbieTraveling).check();
+    //       break;
+    //     case 'cooking':
+    //       await this.page.locator(this.xpathHobbieCooking).check();
+    //       break;
+    //   }
+    // }
     for (const hobby of hobbies) {
-      switch (hobby) {
-        case 'reading':
-          await this.page.locator(this.xpathHobbieReading).check();
-          break;
-        case 'traveling':
-          await this.page.locator(this.xpathHobbieTraveling).check();
-          break;
-        case 'cooking':
-          await this.page.locator(this.xpathHobbieCooking).check();
-          break;
-      }
+      await this.page.locator(`#${hobby}`).check();
     }
   }
 
@@ -240,6 +243,7 @@ export class PersonalNotePage extends MaterialPage {
 
   async verifySearchResult(keyword: string) {
     const count = await this.page.locator(this.xpathNoteItems).count();
+    expect(count).toBeGreaterThan(0);
 
     for (let i = 0; i < count; i++) {
       const item = this.page.locator(this.xpathNoteItems).nth(i);

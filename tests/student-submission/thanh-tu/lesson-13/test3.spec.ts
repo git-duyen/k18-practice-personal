@@ -1,5 +1,3 @@
-// tests/test2.spec.ts
-
 import { test } from './03-fixture';
 
 test('Add Product', async ({ productPage }) => {
