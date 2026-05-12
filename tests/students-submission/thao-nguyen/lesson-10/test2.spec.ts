@@ -1,13 +1,11 @@
 import { test,expect } from '@playwright/test';
-import { RegisterPage } from './01-pom';
+import {ProductPage} from './01-pom';
 test('products page', async ({ page }) => {
-    const productPage = new RegisterPage(page);
+    const productPage = new ProductPage(page);
     await productPage.openMaterialPage();
     await page.locator(productPage.XpathProductPage).click();
-    await page.locator('//button[@data-product-id="1"]').dblclick();
-    await page.locator('//button[@data-product-id="2"]').click();
-    const product3 =page.locator('//button[@data-product-id="3"]');
-    for (let i = 0; i < 3; i++) {
-    await page.locator('//button[@data-product-id="3"]').click(); 
-    };
+   await productPage.addProductToCart(1, 2);
+    await productPage.addProductToCart(2, 1);
+    await productPage.addProductToCart(3, 3);
+    await productPage.verifyTotalPrice('130');
 });

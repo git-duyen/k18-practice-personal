@@ -1,5 +1,6 @@
 import {Page} from "@playwright/test";
 import {Locator} from "@playwright/test";
+import {expect} from "@playwright/test";
 class MaterialBasePage {
     page : Page;
     url : string = 'https://material.playwrightvn.com/';
@@ -15,9 +16,6 @@ class MaterialBasePage {
      async openMaterialPage () {
         await this.page.goto(this.url);
     }
-    async gotoPage(pageName: string) {
-        await this.page.goto(this.XpathProductPage);
-    } 
     async gotoPersonalNotePage() {
         await this.personalNote.click();
     }  
@@ -28,6 +26,8 @@ export class RegisterPage extends MaterialBasePage {
     xpathGenderMale : string = '//input[@id="male"]';
     xpathGenderFemale : string ='//input[@id="female"]';
     xpathReading : string = '//input[@id="reading"]';
+    xpathTraveling : string = '//input[@id="traveling"]';
+    xpathCooking : string = '//input[@id="cooking"]';
     xpathInteresting : string = '//input[@id="interesting"]';
     xpathCountry : string = '//select[@id="country"]';
     xpathDateOfBirth : string = '//input[@id="dob"]';
@@ -59,7 +59,13 @@ export class RegisterPage extends MaterialBasePage {
             await this.page.locator(this.xpathGenderFemale).check();
         }
     }
-}
+        async checkHobbies()
+        {
+            await this.page.locator(this.xpathReading).check();
+            await this.page.locator(this.xpathTraveling).check();
+            await this.page.locator(this.xpathCooking).check();
+        }
+    }
     export class PersonalNotePage extends MaterialBasePage {
         XpathTitle : string = '//input[@id="note-title"]';
         XpathContent : string = '//textarea[@id="note-content"]';
@@ -79,6 +85,27 @@ export class RegisterPage extends MaterialBasePage {
 
     }
 
+export class ProductPage extends MaterialBasePage {
+    XpathProductPage : string = '//a[text()="Bài học 2: Product page"]';
+    XpathProduct1 : string = '//button[@data-product-id="1"]';
+    XpathProduct2 : string = '//button[@data-product-id="2"]';
+    XpathProduct3 : string = '//button[@data-product-id="3"]';
+    totalPrice : Locator;
+    constructor(page: Page) {
+        super(page);
+        this.totalPrice = this.page.locator('.total-price');
+    }
+    //thêm san phẩm vào giỏ hàng
+    async addProductToCart(productId: number , quantity: number) {
+        for (let i = 0; i < quantity; i++) {
+            await this.page.locator(`//button[@data-product-id="${productId}"]`).click();
+        }
+    }
+    async verifyTotalPrice(totalPrice: string) {
+        await expect(this.totalPrice).toContainText(totalPrice);
+    }
+    
+}
 
     
 

@@ -14,10 +14,7 @@ test('truy cập trang', async ({ page }) => {
     await registerPage.fillUsername('Thaotest');
     await registerPage.fillEmail('thaotest@gmail.com');
     await registerPage.checkGender('male');
-    await page.locator(registerPage.xpathReading).check();
-    await page.locator('//input[@id="traveling"]').check(); 
-    await page.locator('//input[@id="cooking"]').check();
-    await page.locator('//select[@id="interests"]').selectOption('technology');
+    await registerPage.checkHobbies();
     await page.locator(registerPage.xpathCountry).selectOption('uk');
     await page.locator(registerPage.xpathDateOfBirth).fill('2026-02-03');
     //await page.locator(registerPage.xpathProfilePicture).setInputFiles('thao-nguyen/lesson-05/thaotest.jpg');
