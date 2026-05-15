@@ -1,0 +1,13 @@
+ancestor
+Ví dụ 1: Chọn các thẻ div có id="grandparent1", id="parent1"
+
+Ví dụ 2: Chọn các thẻ div có id="great-grandparent2", id="grandparent2", id="parent2"
+
+Ví dụ 3: Chọn các thẻ div có id="grandparent3", id="parent3"
+
+ancestor-or-self
+Ví dụ 1: Chọn các thẻ div có id="child1", id="grandparent1", id="parent1"
+
+Ví dụ 2: Chọn các thẻ div có id="great-grandparent2", id="grandparent2", id="parent2"
+
+Ví dụ 3: Chọn các thẻ div có id="grandparent3", id="parent3"

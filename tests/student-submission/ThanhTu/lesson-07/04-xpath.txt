@@ -1,0 +1,13 @@
+descendant
+Ví dụ 1: Chọn các thẻ span có id="child1", id="child2"
+
+Ví dụ 2: Chọn các thẻ span có id="child2-1", id="child2-2"
+
+Ví dụ 3: Chọn các thẻ p có id="child3-1", id="child3-2"
+
+descendant-or-self
+Ví dụ 1: Chọn các thẻ div có id="parent1", id="child1", id="child2"
+
+Ví dụ 2: Chọn các thẻ span có id="child2-1", id="child2-2"
+
+Ví dụ 3: Chọn các thẻ p có id="child3-1", id="child3-2"
