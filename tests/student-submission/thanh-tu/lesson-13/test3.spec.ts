@@ -1,19 +1,19 @@
 import { test } from './03-fixture';
 
-test('Add Product', async ({ productPage }) => {
-  await test.step('Add to Cart', async () => {
-    await productPage.addProduct(1, 2);
-    await productPage.addProduct(2, 3);
-    await productPage.addProduct(3, 1);
+test('Add and Delete in Todo List', async ({ todoPage }) => {
+  await test.step('Add 100 tasks', async () => {
+    await todoPage.addTodos(100);
   });
 
-  await test.step('Verify product quantity', async () => {
-    await productPage.verifyProductQuantity('Product 1', 2);
-    await productPage.verifyProductQuantity('Product 2', 3);
-    await productPage.verifyProductQuantity('Product 3', 1);
+  await test.step('Delete odd tasks', async () => {
+    await todoPage.deleteOdd(100);
   });
 
-  await test.step('Verify Total Price', async () => {
-    await productPage.verifyTotalPrice(110);
+  await test.step('Verify todo #90 is in viewport', async () => {
+    await todoPage.verifyVisible(90);
+  });
+
+  await test.step('Verify todo #21 is not in DOM', async () => {
+    await todoPage.verifyNotExist(21);
   });
 });
