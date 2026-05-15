@@ -26,7 +26,7 @@ So sánh tổng quan
 |Là 1 phần mềm|Là 1 dịch vụ web|
 |Cài đặt trên máy|Host trên website|
 |Là 1 command line tool (cmd)|là công cụ có giao diện|
-|Là một công cụ quản lý phiên ản đưa file vào Git repository|Là nơi để upload Git repository lên|
+|Là một công cụ quản lý phiên bản đưa file vào Git repository|Là nơi để upload Git repository lên|
 |Có các tính năng của Version Control System|Có các tính năng của  VCS và một số tính năng khác|
 
 ### 3 trạng thái của Git
