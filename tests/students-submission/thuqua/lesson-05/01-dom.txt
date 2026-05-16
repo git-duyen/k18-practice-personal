@@ -1,0 +1,101 @@
+1. Cấu trúc DOM cơ bản của một trang web bao gồm các thẻ gì?
+- Một trang HTML cơ bản thường gồm các thẻ sau:
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tiêu đề trang</title>
+  </head>
+  <body>
+    Nội dung hiển thị
+  </body>
+</html>
+
+Trong đó, trang body gồm các thẻ sau:
+    <h1> → <h6>: tiêu đề
+    <p>: đoạn văn
+    <div>: container phổ biến
+    <span>: inline element
+    <a>: link
+    <img>: hình ảnh
+    <ul>, <ol>, <li>: danh sách
+    <form>, <input>, <button>: form
+
+- Cấu trúc dạng cây (DOM Tree)
+Ví dụ: 
+html
+├── head
+│   ├── meta (charset="UTF-8")
+│   ├── meta (viewport)
+│   ├── title
+│   ├── link (CSS)
+│   └── script (JS)
+│
+└── body
+    ├── header
+    │   ├── div (logo)
+    │   │   └── img
+    │   └── nav
+    │       └── ul
+    │           ├── li
+    │           │   └── a (Home)
+    │           ├── li
+    │           │   └── a (About)
+    │           └── li
+    │               └── a (Contact)
+    │
+    ├── main
+    │   ├── section
+    │   │   ├── h1
+    │   │   └── p
+    │   │
+    │   ├── section
+    │   │   ├── h2
+    │   │   ├── div (card)
+    │   │   │   ├── img
+    │   │   │   ├── h3
+    │   │   │   └── button
+    │   │   └── div (card)
+    │   │       ├── img
+    │   │       ├── h3
+    │   │       └── button
+    │
+    └── footer
+        ├── p
+        └── ul
+            ├── li
+            │   └── a
+            └── li
+                └── a
+
+2. Hãy mô tả cấu trúc html của 1 bảng (table)
+- HTML Dạng bảng:
+<table>
+  <caption>Tiêu đề bảng</caption>
+
+  <thead>
+    <tr>
+      <th> Tiêu đề 1 </th>
+      <th>Tiêu đề 2 </th>
+      <th>Tiêu đề 3 </th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>Nội dung cột 1 </td>
+      <td>Nội dung cột 2 </td>
+      <td>Nội dung cột 3 </td>
+    </tr>
+    <tr>
+      <td>Nội dung cột 1 </td>
+      <td>Nội dung cột 2 </td>
+      <td>Nội dung cột 3 </td>
+    </tr>
+  </tbody>
+
+  <tfoot>
+    <tr>
+      <td colspan="3">Total</td>
+    </tr>
+  </tfoot>
+</table>

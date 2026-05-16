@@ -1,0 +1,19 @@
+a. Tạo 3 file: file1, file2, file3 
+=> Cả 3 file nằm ở Working Directory
+
+b. Chạy lệnh: git init
+=> Khởi tạo Git, nhưng chưa có file nào được đưa vào Staging hay Repo
+
+c. Chạy lệnh: git commit -m"init project"
+=> Lệnh này sẽ lỗi vì Staging Area đang trống (git add chưa chạy). Local Repo vẫn chưa có file nào
+
+d. Chạy lệnh: git add file1
+=> file1 được đưa vào Staging Area
+=> file2, file3 vẫn nằm ở Working Directory
+
+e. Chạy lệnh: git commit -m"add file1"
+=> file1 được đưa từ Staging Area vào Repository
+=> Staging Area trống
+
+f. Chạy lệnh: git commit -m"add file"
+=> Lệnh này sẽ lỗi vì Staging Area đang trống

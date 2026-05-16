@@ -1,0 +1,20 @@
+a. Chạy lệnh git init
+- Mới khởi tạo, chưa có file nào ở cả 4 vùng: local, Working directory, Staging, Repository
+
+b. Tao file filel.txt, file2.txt, oops/file3.txt
+- Working directory: file1.txt, file2.txt, oops/file3.txt     //oops: folder
+
+c. Thêm file .gitignore, thêm vào 2 dòng:
+i. file1.txt
+ii. oops/
+- 2 file: file1.txt, oops/ bị gitignore
+- Working directory: file1.txt, file2.txt, oops/file3.txt
+
+d. Chạy lệnh: git add .
+- Staging: file2.txt
+
+e. Chạy lệnh: git commit -m"init project"
+- Repository: file2.txt
+
+f. Thực hiện push code
+- Repo trên GitHub sẽ chỉ hiển thị 1 file: file2.txt
