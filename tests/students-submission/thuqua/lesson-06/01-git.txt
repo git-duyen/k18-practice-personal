@@ -1,0 +1,18 @@
+Giải thích các câu lệnh:
+a. git clone <url>: 
+    - Dùng để copy toàn bộ source code từ remote repository (GitHub/GitLab/...) về máy local
+
+b. git branch <branch_name>: 
+    - Dùng để tạo nhánh mới
+
+c. git checkout <branch_name>: 
+    - Dùng để chuyển sang branch khác
+
+d. git checkout -b <branch_name>: 
+    - Tạo branch mới
+    - Chuyển luôn sang branch đó
+
+e. git pull origin master: 
+    - Lấy code mới nhất từ remote
+    - Merge vào branch hiện tại
+    
