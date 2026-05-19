@@ -1,0 +1,9 @@
+a. git clone <url>
+b. git branch <branch_name>
+Tạo nhánh mới copy giống hệt nhánh hiện tại
+c. git checkout <branch_name>
+Chuyển nhánh
+d. git checkout -b <branch_name>
+Tạo và chuyển nhánh mới
+e. git pull origin master
+pull code từ nhánh master
