@@ -97,6 +97,11 @@ interface ColorfulCircle extends Colorful, Circle {}
 //Type cũng làm dc nhưng dùng &
 type ColorfulCircle = Colorful & Circle;
 
+## Best practice:
+. Interface cho objects (đặc biệt là public API)
+. Type cho mọi thứ còn lại (unions, tuples, utilities)
+
+
 
 ## Class:
 - Dùng để mô hình hóa một đối tượng
