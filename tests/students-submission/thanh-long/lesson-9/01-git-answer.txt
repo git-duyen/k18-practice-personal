@@ -1,0 +1,11 @@
+Git rebase main : Tránh trường hợp đang làm ở nhánh riêng thì main có update mới, sau khi merge tránh dc conflict , ko bị commit rác, đón đầu dc nhánh main
+
+Git merge feature/A : merge nhánh mới vào main
+
+
+Fast forward :  Nhánh main ko có thay đổi gì mới, ko có commit , tạo nhánh mới và có các commit mới, xong merge vào nhánh main.
+Có 2 TH xảy ra :
+1- Main ko có thay đổi, merge nhánh đã làm vào main--> Fast forward xảy ra
+2= Main có update, dùng git-rebase origin main để merge--> Fast forward xảy ra
+
+Three way merge : Khi nhánh main có thảy đổi, có commit mới, merge nhánh đang làm vào mà ko rebase, merge vẫn dc, nhưng xuất hiện nhiều commit rác, main bị rẽ nhánh do main new commit và branch commit chứ ko thẳng hàng,gọn gàng
