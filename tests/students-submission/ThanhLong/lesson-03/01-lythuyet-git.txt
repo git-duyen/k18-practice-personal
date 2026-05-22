@@ -1,0 +1,4 @@
+git commit --amend: Hiển thị trình soạn thảo, show message commit trước đó, có thể edit lại nội dung cũ
+git commit --amend -m <message>: Ghi đè nội dung mới vào nội dung commit cũ
+git restore --staged <file>: back file đang trong staging về lại working directory
+git reset HEAD ~1: đưa file vừa commit mới nhất về lại vùng working directory

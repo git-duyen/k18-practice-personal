@@ -1,0 +1,54 @@
+a: tạo 3 file: file1, file2, file3
+- local: file1, file2, file3
+- Working directory
+- Staging:
+- Repo:
+
+b: Chạy lệnh git init
+- local:
+- Working directory:  file1, file2, file3
+- Staging:
+- Repo:
+
+c: Chạy lệnh git commit -m <init project>
+- local:
+- Working directory:  file1, file2, file3
+- Staging:
+- Repo:
+
+d: Chạy lệnh git add file1
+- local:
+- Working directory: file2, file3
+- Staging: file1
+- Repo:
+
+e: Chạy lệnh git commit -m"add file"
+- local:
+- Working directory:file2, file3
+- Staging:
+- Repo: file1 
+
+f: Chạy lệnh git add .
+- local:
+- Working directory:
+- Staging:file2, file3
+- Repo: file1
+
+g: Chạy lệnh git restore --staged file2
+- local:
+- Working directory:file2
+- Staging: file3
+- Repo:file1
+
+h: Chạy lệnh git commit -m" add all files"
+- local:
+- Working directory:file2
+- Staging:
+- Repo:file1, file3
+
+i: Chạy lệnh git reset HEAD~1
+- local:
+- Working directory:file2, file3
+- Staging:
+- Repo: file1
+

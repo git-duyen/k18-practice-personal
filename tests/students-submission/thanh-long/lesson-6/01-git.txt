@@ -1,0 +1,6 @@
+git clone <url> : clone 1 repo dựa theo url của repo đó về máy
+git branch <branch name> : Tạo ra 1 nhánh mới
+git checkout <branch name> : Switch đến nhánh có tên đó
+git checkout -b <branch name> : tạo nhánh mới và di chuyển đến nhánh đó
+git pull origin master : lấy code mới nhất về, origin là tên của git (github, gitlab, bibicket) có repo đó.
+

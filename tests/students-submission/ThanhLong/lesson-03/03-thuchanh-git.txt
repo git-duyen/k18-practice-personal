@@ -1,0 +1,18 @@
+a: Chạy lệnh git init
+folder demo sẽ thành git repo, .git dc tạo ra, toàn bộ file trong demo sẽ nằm trong working directory
+
+b:tạo file1.txt, file2.txt, oops/file3.txt
+- Working directory : file1.txt, file2.txt, oops/file3.txt
+
+c: thêm .gitignore, add file1.txt, oops/
+- Working directory : file1.txt, file2.txt, oops/file3.txt, .gitignore
+
+d: Chạy lệnh git add .
+- Working directory : file1.txt, oops/file3.txt
+- Staging : file2.txt, .gitignore
+- Repo : 
+
+e: chạy lệnh git commit -m"init project"
+- Working directory : file1.txt, oops/file3.txt
+- Staging :
+- Repo : file2.txt, .gitignore

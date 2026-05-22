@@ -1,0 +1,4 @@
+Git init : Khởi tạo 1 repo local trong máy.
+Git add < file name > : dùng để add 1 file cụ thể vào repo, sau này sẽ push lên github
+Git add . : dùng để add tất cả các file còn lại và các sub-file của chúng
+git commit -m"message" : xác nhận tất cả các file đã add sẽ là các file dc push lên github , có "message" để thông báo và theo dõi status

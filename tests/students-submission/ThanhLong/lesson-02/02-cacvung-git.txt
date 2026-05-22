@@ -1,0 +1,7 @@
+a- file1, file2, file3 : Vùng working directory
+b- Vùng working directory   
+c- Vùng working directory
+d- Vùng staging
+e- Vùng working directory
+f- Vùng working directory
+

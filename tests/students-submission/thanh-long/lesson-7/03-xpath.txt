@@ -1,0 +1,29 @@
+1
+<div id="parent1">...</div>
+<div id="grandparent1">...</div>
+
+2
+<div id="parent2">...</div>
+<div id="grandparent2">...</div>
+<div id="great-grandparent2">...</div>
+
+3
+<div id="parent3">...</div>
+<div id="grandparent3">...</div>
+
+ancestor-or-self
+Chọn tất cả tổ tiên và chính nút hiện tại:
+
+1
+<div id="child1">Nội dung 1</div>
+<div id="parent1">...</div>
+<div id="grandparent1">...</div>
+
+2
+<div id="parent2">...</div>
+<div id="grandparent2">...</div>
+<div id="great-grandparent2">...</div>
+
+3
+<div id="parent3">...</div>
+<div id="grandparent3">...</div>

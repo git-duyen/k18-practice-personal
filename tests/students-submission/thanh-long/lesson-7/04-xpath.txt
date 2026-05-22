@@ -1,0 +1,34 @@
+following
+Chọn tất cả mọi thứ trong tài liệu sau thẻ đóng của nút hiện tại:
+
+1
+<div id="sibling1-1">Anh chị em sau 1-1</div>
+<div id="following1-1">Nội dung sau 1-1</div>
+<div id="following1-2">Nội dung sau 1-2</div>
+
+2
+<div id="sibling2-1">Anh chị em sau 2-1</div>
+<div id="following2-1">Nội dung sau 2-1</div>
+<div id="following2-2">Nội dung sau 2-2</div>
+
+3
+<span id="sibling3-1">Anh chị em sau 3-1</span>
+<span id="following3-1">Nội dung sau 3-1</span>
+<span id="following3-2">Nội dung sau 3-2</span>
+
+following-sibling::
+Chọn tất cả anh chị em sau nút hiện tại:
+
+
+1
+<div id="sibling1-1">Anh chị em sau 1-1</div>
+<div id="sibling1-2">Anh chị em sau 1-2</div>
+
+2
+<span id="sibling2-1">Anh chị em sau 2-1</span>
+<span id="sibling2-2">Anh chị em sau 2-2</span>
+
+3
+<p id="sibling3-1">Anh chị em sau 3-1</p>
+<p id="sibling3-2">Anh chị em sau 3-2</p>
+
