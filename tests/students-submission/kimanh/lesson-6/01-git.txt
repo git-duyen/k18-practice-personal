@@ -1,0 +1,15 @@
+Giải thích câu lệnh
+a. git clone <url>
+=> Lấy code từ 1 repo đã có sẵn về máy cá nhân
+
+b. git branch <branch_name>
+=> Tạo nhánh mới, nhưng chưa switch sang nhánh mới đó
+
+c. git checkout <branch_name>
+=> Switch sang nhánh khác
+
+d. git checkout -b <branch_name>
+=> Tạo nhánh mới và checkout sang nhánh mới vừa tạo luôn
+
+e. git pull origin master
+=> Lấy code mới nhất từ nhánh master trên remote origin và hợp nhất vào nhánh hiện tại
