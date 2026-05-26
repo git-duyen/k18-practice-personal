@@ -1,0 +1,25 @@
+Sau lệnh:
+git init
+
+→ Chưa có file nào được add.
+
+Sau khi tạo:
+file1, file2, file3
+
+→ 3 file đang nằm ở Working Directory (Untracked).
+
+Sau lệnh:
+git add file1
+
+→ file1 nằm trong Staging Area.
+→ file2, file3 vẫn ở Working Directory.
+
+Sau lệnh:
+git commit -m "add file1"
+
+→ file1 được đưa vào Local Repository.
+
+Sau lệnh:
+git commit -m "add file"
+
+→ Không có gì để commit vì chưa git add file2, file3.

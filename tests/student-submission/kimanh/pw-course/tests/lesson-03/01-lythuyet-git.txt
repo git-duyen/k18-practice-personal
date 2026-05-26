@@ -1,0 +1,12 @@
+//Giải thích câu lệnh
+1. git commit --amend : 
+=> Lệnh sửa commit gần nhất, để thay đổi message, thêm/boiwst file. Thay vì tạo commit mới, thì lệnh này để viết lại commit cuối cùng
+
+2. git commit --amend -m<message>
+=> Lệnh sửa commit message
+
+3. git restore --staged <file>
+==> Resote file ở vùng Staging về vùng Working area
+
+4. git reset HEAD~1
+=> Reset 1 commit ở vùng Repository về vùng Working area

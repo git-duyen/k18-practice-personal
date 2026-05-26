@@ -1,0 +1,11 @@
+1. git init
+→ Khởi tạo Git repository trong project
+
+2. git add <file_name>
+→ Add 1 file cụ thể vào staging area
+
+3. git add .
+→ Add toàn bộ file thay đổi vào staging area
+
+4. git commit -m "message"
+→ Tạo commit với message mô tả thay đổi

@@ -1,0 +1,26 @@
+Tạo folder
+a. Chạy lệnh git init
+
+b. Thêm file1.txt, file2.txt, oops/file3.txt
+- Local : file1.txt, file2.txt, oops/file3.txt
+- Working directory: file1.txt, file2.txt, oops/file3.txt
+- Staging:
+- Repository:
+
+c. Thêm file .gitignore với (file1.txt và oops/)
+- Local : file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Working directory: file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Staging:
+- Repository:
+
+d. Chạy lệnh git add .
+- Local : file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Working directory:file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Staging:file2.txt, .gitignore
+- Repository:
+
+2. Chạy lệnh git commit -m"init project"
+- Local : file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Working directory:file1.txt, file2.txt, oops/file3.txt, .gitignore
+- Staging:
+- Repository: file2.txt, .gitignore
