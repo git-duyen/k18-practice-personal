@@ -34,13 +34,13 @@ async function loginAdmin(page) {
     await page.locator("//input[@id='wp-submit']").click();
 }
 async function findToUser(page, username) {
-   //Logic find user
+    //Logic find user
     await page.locator("//div[@class='wp-menu-name']/ancestor::a[@href='users.php']").click();
     await page.locator("//input[@id='user-search-input']").fill(username);
     await page.locator("//input[@id='search-submit']").click();
 }
 async function deleteUser(page, username) {
-   //Logic deleted
+    //Logic deleted
     await page.locator("//td[@data-colname='Username']").hover();
     await expect(page.locator("//a[contains(text(), 'Delete')]")).toBeVisible();
     await page.locator("//a[contains(text(), 'Delete')]").click();
@@ -64,9 +64,9 @@ test.describe("ACCOUNT-Account", () => {
 
     test.afterEach(async ({ page }) => {
         if (userToCleanup) {
-            await logout(page); 
+            await logout(page);
             await loginAdmin(page);
-            await findToUser(page, userToCleanup.userName); 
+            await findToUser(page, userToCleanup.userName);
             await deleteUser(page, userToCleanup.userName);
             await searchUser(page, userToCleanup.userName);
         }
