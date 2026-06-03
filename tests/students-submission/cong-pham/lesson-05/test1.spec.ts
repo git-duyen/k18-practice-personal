@@ -26,7 +26,7 @@ test("Bài học 1: Register Page", async ({ page }) => {
       .pressSequentially("09121998", { delay: 100 });
     await page
       .locator("//input[@id='profile']")
-      .setInputFiles("tests/data-test/data-test.txt");
+      .setInputFiles("tests/students-submission/cong-pham/data-test/data-test.txt");
     await page
       .locator("//textarea[@id='bio']")
       .fill("Cong - 28 years old - Test");

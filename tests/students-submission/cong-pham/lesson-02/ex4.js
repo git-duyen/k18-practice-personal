@@ -1,5 +1,5 @@
 const height = 177;
-const actualHeight = height % 100;
+const actualHeight = height - 100;
 const bestWeight = actualHeight * 9 / 10;
 const maxWeight = actualHeight;
 const minWeight = actualHeight * 8 / 10;
