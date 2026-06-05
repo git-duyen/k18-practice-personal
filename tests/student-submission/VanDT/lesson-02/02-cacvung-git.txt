@@ -1,0 +1,7 @@
+a. Tạo 3 file: file1, file2, file 3 => ở vùng local trên máy
+b. Chạy lệnh git init => 3 file ở vùng working directory
+c. Chạy lệnh git commit -m"init project" 
+=> chưa có gì để commit vào repository nên các file vẫn ở vùng working directory
+d. Chạy lệnh: git add file1 => file1 chuyển sang staging, file2, file3 vẫn ở working directory
+e. Chạy lệnh: git commit -m"add file1" => file 1 ở repository, file2, file3 vẫn ở working directory
+f. Chạy lệnh: git commit -m"add file" => file 1 ở repository, file2, file3 vẫn ở working directory

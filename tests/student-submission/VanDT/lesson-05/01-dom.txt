@@ -1,0 +1,59 @@
+1. Cấu trúc DOM cơ bản của 1 trang web bao gồm những thẻ gì
+Trả lời:
+Bao gồm các thẻ 
+
+<html> thẻ gốc của trang
+<head> chứa metadata: tiêu đề website, hiển thị google
+<body>: nội dụng của các website
+<div> khối/container chung
+<span>: inline container
+<header>, <footer> , <nav>, <section> : thẻ ngữ nghĩa 
+
+Thẻ nội dung
+
+<h1> đến <h6> : tiêu đề
+<p> : đoạn văn
+<a> : liên kết
+<img> : hình ảnh
+<ul> <ol> <li> : danh sách
+
+Thẻ form
+
+<form> : biểu mẫu
+<input> : ô nhập liệu (text, password, checkbox, radio, etc..)
+<button> : nút bấm
+<select> và <option> : dropdown
+<textarea> : vùng văn bản nhiều dòng
+
+2. Mô tả cấu trúc html của 1 bảng table
+<table> thẻ tạo bảng dữ liệu
+  <thead> thẻ chứa phần đầu bảng
+    <tr> thẻ tạo hàng
+      <th>STT</th> Nội dung ô tiêu đề
+      <th>Họ tên</th> Nội dung ô tiêu đề
+      <th>Tuổi</th> Nội dung ô tiêu đề
+      <th>Địa chỉ</th> Nội dung ô tiêu đề
+    </tr> thẻ đóng hàng
+  </thead> thẻ đóng phần đầu bảng
+  <tbody> thẻ chứa nội dung chính
+   <tr>
+      <td>1</td> Nội dung ô 
+      <td>Đỗ Vân</td> Nội dung ô 
+      <td>32</td> Nội dung ô 
+      <td>Hà Nội</td> Nội dung ô 
+   </tr>
+   <tr>
+      <td>2</td> Nội dung ô 
+      <td>Hoàng Thu</td> Nội dung ô 
+      <td>22</td> Nội dung ô 
+      <td>Phú Thọ</td> Nội dung ô 
+   </tr>
+   <tfoot> thẻ chứa phần chân bảng
+    <tr> thẻ tạo hàng
+      <th>Tổng</th>
+      <th>54</th>
+    </tr>
+    </tfoot>
+
+
+
