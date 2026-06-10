@@ -1,0 +1,28 @@
+Bài 1: XPath Axe Methods: ancestor và ancestor-or-self
+ancestor - tổ tiên
+
+1. <div id="grandparent1">
+    <div id="parent1">
+
+2. <div id="great-grandparent2">
+    <div id="grandparent2">
+        <div id="parent2">
+
+3. <div id="grandparent3">
+    <div id="parent3">
+
+
+ancestor-or-self
+
+1. <div id="grandparent1">
+    <div id="parent1">
+        <div id="child1">Nội dung 1</div>
+
+2. <div id="great-grandparent2">
+    <div id="grandparent2">
+        <div id="parent2">
+            <span id="child2">Nội dung 2</span>
+
+3. <div id="grandparent3">
+    <div id="parent3">
+        <p id="child3">Nội dung 3</p>
