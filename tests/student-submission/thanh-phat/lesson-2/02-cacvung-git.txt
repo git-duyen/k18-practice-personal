@@ -1,0 +1,7 @@
+a. Tạo 3 file: file1, file2, file3
+b. git init: để init 1 project xài git
+c. git commit -m "init project": để commit project đã init dùng git
+d. git add file1: add file1 vào staging area
+e. git commit -m "add file1": commit file vào working repository
+f. git commit -m "add file": lỗi 
+git push: push vào nhánh tương ứng

@@ -1,0 +1,24 @@
+
+Bước 1:
+- Chạy lệnh git init để tạo repository GIt mới
+
+Bước 2:
+- Tạo file file1.txt, file2.txt và oops/file3.txt
+
+Bước 3:
+- Thêm file .gitignore
+
+Bước 4:
+git add .
+ -> Sẽ add file2.txt vào staging area
+
+ Bước 5:
+ git commit -m "init project"
+ -> Sẽ chỉ commit file2.txt
+
+ Bước 6:
+ git push
+ -> Sẽ chỉ push file2.txt vào main branch
+
+
+ 

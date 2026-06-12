@@ -1,0 +1,6 @@
+git init: để init 1 project xài git
+git add <tên file>: dùng để add file vô staged
+git add . : thêm tất cả untracked files vô staged
+git commit -m "message": commit với message thay vì đưa vào VIM
+
+

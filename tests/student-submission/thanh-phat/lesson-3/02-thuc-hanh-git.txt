@@ -1,0 +1,33 @@
+Bài tập:
+
+
+Bước 1:
+- Tạo 1 folder có tên là 'demo' trên máy tính của bạn.
+
+Bước 2:
+- Tạo 3 file có lần lượt là: 'file1.txt', 'file2.txt', 'file3.txt' trong folder 'demo' vừa tạo.
+
+Bước 3:
+- Chạy lệnh `git init` trong folder 'demo' để khởi tạo một repository Git mới.
+
+Bước 4:
+- Chạy lệnh git commit -m "init project" để tạo một commit đầu tiên với thông điệp "init project".
+
+Bước 5:
+- Chạy lệnh git add file1.txt để thêm file1.txt vào staging area.
+
+Bước 6:
+- Chạy lệnh git commit -m "add file" để tạo một commit mới với thông điệp "add file".
+
+Bước 7:
+- Chạy lệnh git add . để thêm tất cả các file còn lại vào staging area.
+
+Bước 8:
+- Chạy lệnh git restore --staged file2 để bỏ file2 staging area.
+
+Bước 9:
+- Chạy lệnh git commit -m "add file3" để tạo commit với thông điệp "add file3"
+
+Buớc 10:
+- Chạy lệnh git reset HEAD~1 để đưa commit "add file3" về trạng thái chưa commit, nhưng vẫn giữ file3 trong staging area.
+

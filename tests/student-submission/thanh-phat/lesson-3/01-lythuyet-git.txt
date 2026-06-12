@@ -1,0 +1,4 @@
+git restore --stage <tên file>; đưa ra khỏi staged và trở lại trạng thái modified 
+git reset HEAD~1: Xóa commit cuối, nhưng giữ lại tất cả thay đổi ở working directory (chưa staged).
+git commit --amend: thay đổi commit mới nhất với những thay đổi trong project, đưa vào VIM, dùng i để insert message và dùng ESC :wq để thoát sau khi đã input đầy đủ
+git commit --amend -m 'message': thay đổi commit mới nhất với những thay đổi trong project với inserted message trong command line
