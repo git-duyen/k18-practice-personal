@@ -4,7 +4,7 @@ git commit --amend
 git commit --amend -m "message"
 + Sửa commit cuối cùng và sửa lun message
 
-git restore --stage <file>
+git restore --staged <file>
 chuyển file từ staging về working directory
 
 git reset HEAD~1

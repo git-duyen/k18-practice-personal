@@ -11,7 +11,7 @@
 
 - Tạo nhánh mới:  **git branch <ten_branch>**
 - Chuyển sang nhánh mới: **git checkout <ten_branch>**
-- Vừa tạo nhánh mới vừa chuyển sang nhánh mới: **git checkout - <ten_nhanh>**
+- Vừa tạo nhánh mới vừa chuyển sang nhánh mới: **git checkout -b <ten_nhanh>**
 - Xóa branch: **git branch -D <ten_branch>**
   + Note: đứng ở nhánh khác trước khi xóa
 

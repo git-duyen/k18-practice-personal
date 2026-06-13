@@ -24,7 +24,7 @@ Các comment khi làm việc với git:
 - Vòng lặp:
   + for (i)
   + for (of)
-  + for (each)
+  + forEach
   + for (in)
   + while
   + do..while

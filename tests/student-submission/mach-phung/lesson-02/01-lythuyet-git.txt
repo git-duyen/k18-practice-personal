@@ -1,6 +1,6 @@
 - git init
  Lệnh khởi tạo repo ở local 
-- git addn <file_name> 
+- git add <file_name> 
  Lệnh thêm 1 file cụ thể vào staging
 - git add .
  Lệnh thêm tất cả các file vào staging

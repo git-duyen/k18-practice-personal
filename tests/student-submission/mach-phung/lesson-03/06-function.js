@@ -25,7 +25,7 @@ function getTopStudent(students, threshold) {
 
   return topStudent;
 }
-students = [
+const students = [
   { name: "Alice", score: 8.5 },
   { name: "Bob", score: 9.5 },
   { name: "Charlie", score: 7 },
