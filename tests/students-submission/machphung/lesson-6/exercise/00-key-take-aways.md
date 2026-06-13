@@ -1,6 +1,6 @@
 # **Git: remote**
 
-- **Remote repository** là danh sách các repository được lưu trữ từ máy chủ (remote server), cho phép bạn cộng tác với người khác
+- **Remote repository** là repository được lưu trữ trên máy chủ (remote server), cho phép bạn cộng tác với người khác
   - Mỗi remote được định danh bằng một tên ngắn gọn và liên kết đến một URL
   - VD: git remote add origin git@github.com:bba/k18-practice.git
     - Tên ngắn gọn: origin
@@ -30,7 +30,7 @@
 ## Stashing
 
 - Hành động lưu trữ các thay đổi hiện tại (ở vùng staging) vào 1 vùng nhớ tạm
-- **git stash save**
+- **git stash push**
 - Stash giúp có thể chuyển đổi qua một nhánh khác dễ dàng hơn
 - Để lấy lại công việc, dùng lệnh: **git stash pop**
 
@@ -47,14 +47,14 @@
 
   // Nội dung class ở đây
 
-}
+  }
 
 - VD:
   class TestCase {
 
   // Class để quản lý test case
 
-}
+  }
 
 class Product {
 
