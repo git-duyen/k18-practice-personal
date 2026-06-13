@@ -1,0 +1,10 @@
+a. git clone <url>
+- Lấy code từ 1 repo đã có sẵn về máy tính cá nhân
+b. git branch <branch_name>
+- Tạo 1 branch mới nhưng không chuyển về branch đó
+c. git checkout <branch_name>
+- Chuyển sang nhánh cụ thể nào đó
+d. git checkout -b <branch_name>
+- Vừa tạo mới vừa chuyển sang nhánh mới tạo
+e. git pull origin master 
+- Lấy những thay đổi mới nhất và hợp nhất (merge) nhánh master từ remote origin vào nhánh hiện tại
