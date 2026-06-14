@@ -10,7 +10,7 @@ class Student {  // Student: PascalCase
     }
     // phương thức/ method
     sayMyName(){
-        console.log(`My name is ${name}`);
+        console.log(`My name is ${this.name}`);
     };
 
     saySomething(message){
