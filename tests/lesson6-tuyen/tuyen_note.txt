@@ -1,0 +1,1 @@
+Khi làm 1 tính năng mới thì sẽ tạo 1 nhánh mới
