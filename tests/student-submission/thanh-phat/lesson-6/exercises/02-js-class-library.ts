@@ -6,8 +6,6 @@ interface Books {
 class Library {
     books: Books[];
     constructor(private name: string, private location: string) {
-        this.name = name;
-        this.location = location;
         this.books = [];
     }
 
@@ -16,7 +14,7 @@ class Library {
         console.log(`Đã thêm: "${book.bookName}" x ${book.bookAuthor}`);
     }
 
-    findBook(bookName: string): Books | any {
+    findBook(bookName: string): Books | undefined {
         const result = this.books.find((book) => book.bookName.toLowerCase() === bookName.toLowerCase());
         if (result) {
             console.log(`Tìm thấy sách:`);

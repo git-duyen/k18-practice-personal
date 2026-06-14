@@ -7,7 +7,6 @@ class Team {
     player: Players[];
 
     constructor(private name: string) {
-        this.name = name;
         this.player = [];
     }
 

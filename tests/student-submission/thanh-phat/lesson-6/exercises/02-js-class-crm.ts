@@ -1,10 +1,6 @@
 class Customer {
 
     constructor(private id: number, private name: string, private email: string, private phone: string) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.phone = phone;
     }
 
     displayInfo() {
@@ -14,7 +10,7 @@ class Customer {
         console.log(`Phone is: ${this.phone}`);
     }
 
-    updateEmail(newEmail: string){
+    updateEmail(newEmail: string) {
         this.email = newEmail;
         console.log(`New email is:  ${this.email}`);
     }
