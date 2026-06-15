@@ -1,0 +1,5 @@
+git clone <url>: lấy code từ 1 repository về
+git branch <branch_name>: tạo 1 branch mới
+git checkout <branch_name>: chuyển qua 1 branch khác
+git checkout -b <branch_name>: tạo branch mới và chuyển qua branch đó
+git pull origin master: lấy và hợp nhất các thay đổi từ nhánh master của remote origin vào nhánh hiện tại
