@@ -26,21 +26,11 @@ class Order {
         return this.items;
     }
 
-    calculateTotalForEach(orderItems: Items[]) {
-        return orderItems.map(item => {
-            const totalAmount = item.price * item.amount * (1 - item.discount / 100);
-        
-            return {
-                ...item,
-                totalAmount
-            };
-        })
-    }
-
-    calculateTotalAmount(orderItems: ItemsAmount[]){
-        return orderItems.reduce((total, item) => {
-            return total + item.totalAmount;
-        }, 0);
+    calculateTotal() {
+        this.totalAmount = this.items.reduce((total, item) => {
+            return total = total + item.price * item.amount * (1 - item.discount / 100);
+        },0)
+        return this.totalAmount;
     }
 }
 
@@ -54,16 +44,8 @@ for(let item of orderItems){
     order.addItem(item);
 }
 // console.log(order);
-interface ItemsAmount {
-    name: string;
-    price: number;
-    amount: number;
-    discount: number;
-    totalAmount: number;
-}
 
-let itemAmount = order.calculateTotalForEach(orderItems);
-console.log(`Total amount is`, order.calculateTotalAmount(itemAmount));
+console.log(`Total amount is`, order.calculateTotal());
 
 
 

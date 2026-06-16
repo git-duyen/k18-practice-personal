@@ -28,7 +28,7 @@ class Customer {
     }
 }
 
-const customer1 = new Customer('Cust_01', 'Ana', 'ana@mail.com',8432432442);
+const customer1 = new Customer('Cust_01', 'Ana', 'ana@mail.com','8432432442');
 
 customer1.displayInfo();
 customer1.updateEmail('newEmail@mail.com');

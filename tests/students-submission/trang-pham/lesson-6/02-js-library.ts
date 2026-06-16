@@ -14,9 +14,8 @@ class Library {
     }
 
     findBook(bookName: string){
-        for(let name of this.books) {
-            return this.books.filter(name => name.includes(bookName))
-        }
+        return this.books.filter(name => name.includes(bookName))
+        
     }
 }
 
