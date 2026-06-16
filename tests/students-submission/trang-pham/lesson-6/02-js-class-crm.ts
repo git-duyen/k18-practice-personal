@@ -2,13 +2,13 @@ class Customer {
     id: string;
     name: string;
     email: string;
-    phone: number;
+    phone: string;
 
     constructor(
         id: string, 
         name: string, 
         email: string,
-        phone: number
+        phone: string
     ){
         this.id = id;
         this.name = name;
