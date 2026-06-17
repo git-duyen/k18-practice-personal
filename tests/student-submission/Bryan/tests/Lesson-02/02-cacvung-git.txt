@@ -1,0 +1,29 @@
+Giả sử ban đầu trong thư mục có 3 file: file1, file2, file3 (chưa được Git theo dõi).
+a. Tạo 3 file: file1, file2, file3
+* Working directory: file1, file2, file3 (untracked)
+* Staging area: (trống)
+* Repository: (chưa có)
+b. git init
+* Working directory: file1, file2, file3 (untracked)
+* Staging area: (trống)
+* Repository: (đã khởi tạo nhưng chưa có commit nào)
+c. git commit -m "init project"
+* Lệnh commit không thực thi (nothing to commit) → không tạo commit
+* Working directory: file1, file2, file3 (untracked)
+* Staging area: (trống)
+* Repository: vẫn chưa có commit
+d. git add file1
+* Working directory: file1, file2, file3
+  (file1 đã được track, file2 & file3 vẫn untracked)
+* Staging area: file1
+* Repository: chưa thay đổi
+e. git commit -m "add file1"
+* Working directory: file1, file2, file3
+  (file1 đã track, file2 & file3 untracked)
+* Staging area: (trống)
+* Repository: có 1 commit chứa file1
+f. git commit -m "add file"
+* Lệnh commit không thực thi (nothing to commit) → không tạo commit
+* Working directory: file1, file2, file3
+* Staging area: (trống)
+* Repository: vẫn chỉ có 1 commit (file1)

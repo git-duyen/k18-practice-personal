@@ -1,0 +1,30 @@
+Tạo folder demo -> chưa có file nào
+- Local : empty
+- Working directory : empty
+- Staging : empty
+- Repository : empty
+a: Chạy lệnh git init
+- Local : empty
+- Working directory : empty
+- Staging : empty
+- Repository : empty
+b: tạo file file1.txt, file2.txt,oops/file3.txt // file1,2 nằm trong folder demo , file3 nằm trong demo/oops/
+- Local : file1, file2,file3
+- Working directory : file1, file2,file3
+- Staging : empty
+- Repository : empty
+c: thêm.gitignore có 2 dòng file1.txt, \n oops/
+- Local : file1, file2,file3, .gitignore
+- Working directory : file1, file2,file3
+- Staging : empty
+- Repository : empty
+d: chạy lệnh git add .
+- Local : file1, file2,file3
+- Working directory : file1, file2,file3
+- Staging : file2, .gitignore
+- Repository : empty
+e: chạy lệnh git commit -m "init project"
+- Local : file1, file2,file3
+- Working directory : file1, file2,file3
+- Staging : empty
+- Repository : file2, .gitignore

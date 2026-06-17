@@ -1,0 +1,9 @@
+Ý nghĩa của các command: 
+git init:
+Khởi tạo một repository Git mới trong thư mục hiện tại. Sau khi chạy lệnh này, Git sẽ bắt đầu theo dõi các thay đổi của dự án.
+git add <file_name>:
+Thêm một file cụ thể vào staging area (khu vực chuẩn bị commit). Chỉ những file được add mới được đưa vào commit.
+git add . :
+Thêm tất cả các file và thay đổi trong thư mục hiện tại vào staging area.
+git commit -m "message":
+Lưu lại (commit) các thay đổi đã được đưa vào staging area, kèm theo một thông điệp (message) mô tả nội dung thay đổi.
