@@ -1,0 +1,5 @@
+a. git clone <url> : clone bộ một repository về local
+b. git branch <branch_name> : Tạo một branch mới với tên chỉ định, nhưng không tự động chuyển sang branch đó
+c. git checkout <branch_name> : Chuyển sang một branch đã tồn tại. Toàn bộ working directory sẽ được cập nhật theo trạng thái của branch đó.
+d. git checkout -b <branch_name> : Tạo một branch mới và cuyển sang branch đó ngay lập tức — kết hợp cả git branch và git checkout
+e. git pull origin master : pull toàn bộ thay đổi mới nhất từ ​​branch master về local và tự động merge vào branch hiện tại.
