@@ -1,0 +1,17 @@
+Giải thích các câu lệnh:
+
+a. git clone <url>
+Là hành động lấy code từ 1 repo đã có sẵn về máy tính cá nhân.
+Sao chép (download) toàn bộ repository từ remote (GitHub, GitLab...) về máy local. Tạo ra một thư mục mới chứa toàn bộ code và lịch sử commit.
+
+b. git branch <branch_name>
+Tạo một nhánh mới với tên branch_name. Chỉ tạo nhánh, không tự động chuyển sang nhánh đó.
+
+c. git checkout <branch_name>
+Chuyển sang nhánh branch_name đã tồn tại. Code trong thư mục sẽ được cập nhật theo nhánh đó.
+
+d. git checkout -b <branch_name>
+Kết hợp 2 lệnh trên: vừa tạo nhánh mới vừa chuyển sang nhánh đó luôn. Tương đương với: git branch <branch_name> & git checkout <branch_name>
+
+e. git pull origin master
+Kéo (download) code mới nhất từ nhánh master trên remote origin về và merge vào nhánh hiện tại đang làm việc.
