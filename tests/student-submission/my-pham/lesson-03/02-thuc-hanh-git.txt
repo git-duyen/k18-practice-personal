@@ -1,0 +1,51 @@
+a. Tạo 3 file: file1, file2, file3
+- Local: file1, file2, file3
+- Working directory:
+- Staging:
+- Repository:
+b. Chạy lệnh git init:
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging:
+- Repository:
+c. Chạy lệnh git commit -m"init project"
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging:
+- Repository:
+d. Chạy lệnh git add file1
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: file1
+- Repository:
+c. Chạy lệnh git commit -m"add file"
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository: file1
+- Có 1 commit với message "add file"
+d. Chạy lệnh git add .
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: file2, file3
+- Repository: file1
+- Có 1 commit với message "add file"
+g. Chạy lệnh git restore --staged file2
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: file3
+- Repository: file1
+- Có 1 commit với message "add file"
+h. Chạy lệnh git commit -m"add all files"
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository: file1, file2
+- Có 1 commit với message "add all files"
+- Có 1 commit với message "add file"
+i. Chạy lệnh: git reset HEAD~1
+- Local: file1, file2, file3
+- Working directory: file1, file2, file3
+- Staging: 
+- Repository: file1
+- Có 1 commit với message "add file"

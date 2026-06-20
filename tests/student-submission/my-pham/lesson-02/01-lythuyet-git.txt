@@ -1,0 +1,4 @@
+1. Giải thích các câu lệnh:
+git init: khởi tạo git trong một thư mục
+git add .: add 1 file từ vùng working directory lên stagging
+git commit -m"message": tạo 1 version có tên "message" trên repository gồm các file đã được add lên stagging

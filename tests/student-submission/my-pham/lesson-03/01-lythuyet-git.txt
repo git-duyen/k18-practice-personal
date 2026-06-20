@@ -1,0 +1,5 @@
+Giải thích các câu lệnh:
+git commit --amend: sửa commit gần nhất, mở bằng VIM
+git commit --amend -m"<message>": sửa message của commit gần nhất
+git restore --staged <tên file>: lấy file từ staging về working directory
+git reset HEAD~1: lấy 1 commit gần nhất từ repository về working directory

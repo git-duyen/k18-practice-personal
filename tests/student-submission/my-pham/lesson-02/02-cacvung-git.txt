@@ -1,0 +1,36 @@
+Liệt kê file theo từng vùng sau khi thao tác:
+a. Tạo 3 files file1, file2, file3
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: chưa có file
+- Vùng stagging: chưa có file
+- Vùng repostory: chưa có file
+
+b. Chạy lệnh: git init
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: có 3 file là file1, file2, file3
+- Vùng stagging: chưa có file
+- Vùng repostory: chưa có file
+
+c. Chạy lệnh: git commit -m"init project"
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: có 3 file là file1, file2, file3
+- Vùng stagging: chưa có file
+- Vùng repostory: có version tên là 'init project' không gồm file nào
+
+d. Chạy lệnh: git add file1
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: có 3 file là file1, file2, file3
+- Vùng stagging: có file1
+- Vùng repostory: không gồm file nào
+
+e. Chạy lệnh: git commit -m"add file1"
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: có 3 file là file1, file2, file3
+- Vùng stagging: có file1
+- Vùng repostory: có version tên là 'add file1' gồm file1
+
+f. Chạy lệnh: git commit -m"add file"
+- Vùng local: có 3 file là file1, file2, file3
+- Vùng working directory: có 3 file là file1, file2, file3
+- Vùng stagging: có file1
+- Vùng repostory: có version tên là 'add file1' gồm file1
