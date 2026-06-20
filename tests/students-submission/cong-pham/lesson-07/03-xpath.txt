@@ -1,0 +1,47 @@
+*** Ancestor
+Ví dụ 1: //div[@id='child1']/ancestor::div
+<div id="grandparent1"> <- ông
+    <div id="parent1"> <- cha
+
+    </div>
+</div>
+
+Ví dụ 2: //span[@id='child2']/ancestor::div
+<div id="great-grandparent2"> <- cụ
+    <div id="grandparent2"> <- ông
+        <div id="parent2"> <- cha
+
+        </div>
+    </div>
+</div>
+
+Ví dụ 3: //p[@id='child3']/ancestor::div
+<div id="grandparent3"> <- ông
+    <div id="parent3"> <- cha
+        
+    </div>
+</div>
+
+*** Ancestor or self
+Ví dụ 1: //div[@id='child1']/ancestor-or-self::div
+<div id="grandparent1"> <- ông
+    <div id="parent1"> <- cha
+        <div id="child1">Nội dung 1</div> <- self
+    </div>
+</div>
+
+Ví dụ 2: //span[@id='child2']/ancestor-or-self::div -> no self do tìm div
+<div id="great-grandparent2"> <- cụ
+    <div id="grandparent2"> <- ông
+        <div id="parent2"> <- cha
+            
+        </div>
+    </div>
+</div>
+
+Ví dụ 3: //p[@id='child3']/ancestor-or-self::div -> no self do tìm div
+<div id="grandparent3"> <- ông
+    <div id="parent3"> <- cha
+        
+    </div>
+</div>
