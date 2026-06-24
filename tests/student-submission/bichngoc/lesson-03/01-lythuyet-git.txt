@@ -1,0 +1,4 @@
+- Edit the latest commit message: git commit --amend (sửa msg trong giao diện edit)
+- Replace the latest commit message directly: git commit --amend -m"msg"
+- Staging -> Working: git restore --staged <file name> 
+- Repository -> Staging: git reset HEAD~ <số commit>

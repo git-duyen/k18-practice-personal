@@ -1,0 +1,12 @@
+Các câu lệnh 
+- Làm 1 lần duy nhất:
+    Khởi tạo repo local: git init
+
+- Làm mỗi khi có thay đổi:
+    - Thêm tất cả file vào staging: git add .
+    - Thêm từng file vào staging: git add <file name>
+    - Commit file: git commit -m"msg"
+    Note: Msg commit theo kiểu: 
+        - chore: sửa nhỏ lẻ, chính tả, xóa file k dùng
+        - feat: thêm TC mới
+        - fix: chỉnh sửa file đã có

@@ -1,0 +1,6 @@
+a. Tạo 3 file: file1, file2, file3 -> Working
+b. Chạy lệnh: git init -> Working
+c. Chạy lệnh: git commit -m"init project" -> lỗi vì chưa add file
+d. Chạy lệnh: git add file1 -> Staging
+e. Chạy lệnh: git commit -m"add file1" -> Repository
+f. Chạy lệnh: git commit -m"add file" -> lỗi vì chưa có file
