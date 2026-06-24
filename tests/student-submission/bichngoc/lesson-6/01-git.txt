@@ -1,0 +1,16 @@
+a. git clone <url>
+Dùng để tải (sao chép) toàn bộ repository từ remote về máy local.
+
+b. git branch <branch_name>
+Dùng để tạo branch mới.
+
+c. git checkout <branch_name>
+Dùng để chuyển sang branch đã tồn tại.
+
+d. git checkout -b <branch_name>
+Vừa tạo branch mới, vừa chuyển sang branch đó.
+
+e. git pull origin master
+Lấy code mới nhất từ branch master trên GitHub.
+Merge vào branch main hiện tại.
+
