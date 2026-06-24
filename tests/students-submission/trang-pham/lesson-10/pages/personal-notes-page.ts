@@ -42,9 +42,9 @@ export class PersonalNotesPage extends MaterialBasePage {
         return actual;
     }
 
-    verifyListAfterSearch = async (actions: Actions[], searchText: string) => {
+    verifyListAfterSearch = (actions: Actions[], searchText: string) => {
         const keyword = searchText.toLowerCase();
-        return actions.filter(ele => ele.action.includes(searchText) || ele.description.includes(searchText));
+        return actions.filter(ele => ele.action.includes(keyword) || ele.description.includes(keyword));
     }
 
 }

@@ -131,8 +131,4 @@ export class RegisterPage extends MaterialBasePage {
         );
         return formatData;
     };
-
-
-    
-
 }

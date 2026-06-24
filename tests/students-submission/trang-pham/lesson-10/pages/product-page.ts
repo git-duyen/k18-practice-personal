@@ -52,20 +52,21 @@ export class ProductPage extends MaterialBasePage {
     }
 
     getQuantityAndPrice = async (productNumber: number) => {
-        let productName = await this.productName(productNumber).textContent();
+        const productName = await this.productName(productNumber).textContent() ?? '';
 
         // Get price by each product
-        let priceByProduct = await this.cartPriceOfProduct(productNumber).textContent();
+        const priceByProduct = await this.cartPriceOfProduct(productNumber).textContent();
 
-        let price = Number(priceByProduct!.replace('$', ''));
+        const price = priceByProduct ? Number(priceByProduct.replace('$', '')) : 0;
 
         // Get quantity of each product
-        let quantityOfEachProd = Number(await this.cartQuantityByProduct(productNumber).textContent());
+        const quantityText = await this.cartQuantityByProduct(productNumber).textContent();
+        const quantityOfEachProd = quantityText ?  Number(quantityText) : 0;
 
         // Get total price of each product 
-        let totalPrice = await this.cartTotalPriceByProd(productNumber).textContent();
-        let totalPriceOfEachProd = Number(totalPrice!.replace('$', ''));
-    
+        const totalPriceText = await this.cartTotalPriceByProd(productNumber).textContent();
+        const totalPriceOfEachProd = totalPriceText ? Number(totalPriceText.replace('$', '')) : 0;  
+          
         return {productName, price, quantityOfEachProd, totalPriceOfEachProd}
     }
 }

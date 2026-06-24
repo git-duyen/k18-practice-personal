@@ -32,7 +32,8 @@ test('Add notes', async ({page}) => {
     });
 
     await test.step('Verify the list after searching', async () => {
-        console.log(personalNotesPage.verifyListAfterSearch(actions, 'fill'));
+        const expected = personalNotesPage.verifyListAfterSearch(actions, 'fill');
+        expect(list).toEqual(expected)
     });
 }
 )

@@ -58,11 +58,11 @@ export class TodoPage extends MaterialBasePage {
     }
 
     // Verify to do item that have even number
-    isTodoEven = async (listTodo: string[]) => {
-        listTodo.filter(item => {
-        let number = Number(item.split(' ')[1]);
-        if((number % 2 === 0) && item.split(' ')[0] === 'Todo')
-            return true;
+    isTodoEven = (listTodo: string[]) => {
+        return listTodo.every(item => {
+            const part = item.split(' ');
+            const number = Number(part[1]);
+            return part[0] === 'Todo' && number % 2 === 0;
         })
     }
 

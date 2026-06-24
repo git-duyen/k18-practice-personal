@@ -27,7 +27,7 @@ test('Add to-do item', async ({page}) => {
 
     await test.step('Check only item with even number in viewport', async() => {
         const items = await todoPage.checkEvenItemViewport();
-        todoPage.isTodoEven(items);
+        expect(todoPage.isTodoEven(items)).toBe(true);
 
         expect(items).toContain('Todo 10');
     })
@@ -35,4 +35,5 @@ test('Add to-do item', async ({page}) => {
     await test.step(`Check todo with number is hidden`, async() => {
         expect(todoPage.xpathItemHidden('Todo 3')).toBeHidden();
     })
+
 });
