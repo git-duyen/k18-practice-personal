@@ -25,6 +25,8 @@ class Order {
     }
     console.log(`Total: ${this.totalAmount}`);
   }
+  return this.totalAmount; // fix : return the price after calculating the total amount
+  
 }
 
 // Test

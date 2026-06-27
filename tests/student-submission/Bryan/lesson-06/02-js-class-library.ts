@@ -18,10 +18,11 @@ class Library {
     for (let i = 0; i < this.books.length; i++) {
       if (this.books[i].title === title) {
         console.log(`Found: ${this.books[i].title} - ${this.books[i].author}`);
-        return;
+        return this.books[i]; // fix : return the book object if found
       }
     }
     console.log(`Book "${title}" not found`);
+    return null; // fix : return the book object if not found
   }
 }
 
