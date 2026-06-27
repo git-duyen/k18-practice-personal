@@ -16,7 +16,7 @@ class Library {
 
     // Tìm sách theo tiêu đề
     findBook(title: string): string | undefined {
-        return this.books.find(book => book === title);
+        return this.books.find(book => book.toLowerCase() === title.toLowerCase());
     }
 }
 
