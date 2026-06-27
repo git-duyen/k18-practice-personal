@@ -113,7 +113,11 @@ export class RegisterPage extends MaterialBasePage {
     }
     
     async getContent() {
-        const [createdUserInfo] = await this.page.locator('//table[@id="userTable"]//tbody//td[4]').allTextContents();
+        const contents = await this.page.locator('//table[@id="userTable"]//tbody//td[4]').allTextContents();
+        if (contents.length === 0) {
+            return {};
+        }
+        const createdUserInfo = contents[0];
         const formatData =  Object.fromEntries(
             createdUserInfo
             .trim()
@@ -126,7 +130,7 @@ export class RegisterPage extends MaterialBasePage {
                 .toLowerCase()
                 .replace(/\s+(\w)/g, (_, char) => char.toUpperCase());
 
-                return [camelKey, value.trim()];
+                return [camelKey, value ? value.trim() : ''];
             })
         );
         return formatData;
