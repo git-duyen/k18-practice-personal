@@ -1,0 +1,4 @@
+git rebase main: dùng để thay đổi base của nhánh, giúp tạo ra lịch sử commit sạch sẽ hơn
+git merge feature/A: gộp nhánh feature/A vào nhánh hiện tại đang đứng
+Fast forward: xảy ra khi không có commit mới nào trên nhánh chính kể từ khi tách nhánh phụ
+Three way merge: khi merge tạo ra merge commit, xảy ra khi bạn muốn merge nhánh phụ vào nhánh chính và lịch sử cả 2 nhánh đã có thay đổi
