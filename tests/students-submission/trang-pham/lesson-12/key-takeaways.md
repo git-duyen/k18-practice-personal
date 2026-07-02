@@ -39,7 +39,7 @@
 Style uses as `extend`  of a class, when declare a class ( extend to another) and use the methods from extended class
 
 ```jsx
-productPage extends HomePage
+class ProductPage extends HomePage
 const productPage = new ProductPage();
 // navigateTo method from HomePage
 productPage.navigatTo('product');
