@@ -1,0 +1,70 @@
+Question 1: Cấu trúc DOM cơ bản của 1 trang web gồm những thẻ gì?
+
++ Answer: Cấu trúc DOM cơ bản cho 1 website gồm:
+            HTML
+            ├── Head
+            │   ├── Title
+            │   ├── Meta
+            │   ├── CSS
+            │   └── JavaScript
+            │
+            └── Body
+                ├── Header
+                │   └── Navigation
+                │
+                ├── Main
+                │   ├── Section
+                │   │   ├── Div
+                │   │   │   ├── Span
+                │   │   │   ├── Input
+                │   │   │   └── Button
+                │   │   └── Div
+                │   │
+                │   └── Form
+                │       ├── Input
+                │       └── Button
+                │
+                └── Footer
+
++ Các thành phần phổ biến:
+    - <div>: dùng để nhóm các phần tử thành khối/ container chung
+    - <span>: hiển thị văn bản ngắn
+    - <input>: trường nhập liệu
+    - <button>: nút bấm
+    - <p>: định nghĩa đoạn văn bản
+    - <a>: tạo siêu liên kết đến trang khác, file, email hoặc vị trí trong trang
+    - <form>: biểu mẫu
+    - <table>: bảng dữ liệu
+    - <img>: chèn hình ảnh vào trang web
+    - <ul>: tạo danh sách không thứ tự
+    - <ol>: tạo danh sách có thứ tự
+    - <li> : định nghĩa mục danh sách
+
+Question 2: Hãy mô tả cấu trúc html của 1 bảng (table)
+
+-> Anwser: Cấu trúc html của 1 table gồm các elements:
+            table
+            ├── thead
+            │   └── tr
+            │       ├── th
+            │       ├── th
+            │       └── th
+            │
+            └── tbody
+                ├── tr
+                │   ├── td
+                │   ├── td
+                │   └── td
+                │
+                └── tr
+                    ├── td
+                    ├── td
+                    └── td
+-> Note:
+        - table: Thẻ cha chứa toàn bộ bảng.
+        - thead: Chứa phần đầu bảng, tiêu đề cột.
+        - tbody: Chứa dữ liệu chính của bảng.
+        - tr (table row): Tạo 1 hàng trong bảng.
+        - th (table header): Tạo ô tiêu đề.
+        - td (table data): Chứa dữ liệu của bảng.
+        - colspan/rowspan: Gộp nhiều cột/hàng thành một ô.

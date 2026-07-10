@@ -1,0 +1,4 @@
+git commit --amend : Lấy commit gần nhất và mở editor để người dùng chỉnh sửa commit message thủ công.
+git commit --amend -m "<message>": Lấy commit gần nhất và thay đổi commit message trực tiếp trên command line, không cần mở editor. 
+git restore --staged <file>: Đưa file từ Staging area về lại Working Directory area (Undo git add).
+git reset HEAD~1 : Reset commit gần nhất từ Repo Area về lại Working Directory area (Undo git commit).

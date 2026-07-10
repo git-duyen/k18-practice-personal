@@ -1,0 +1,12 @@
+Đề bài: Tạo 3 file: file1, file2, file3
+Chạy lệnh: git int
+Chạy lệnh: git commit -m"init project"
+Chạy lệnh: git add file1
+Chạy lệnh: git commit -m"add fiel1"
+Chạy lệnh: git commit -m"add file"
+
+==========================================
+Results:
+1. file1: Repository area
+2. file2: Working directory area
+3. file3: Working directory area
