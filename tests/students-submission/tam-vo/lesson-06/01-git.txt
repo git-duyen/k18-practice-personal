@@ -1,0 +1,6 @@
+Bài tập với Git - Giải thích các câu lệnh Git:
+1. git clone <url> : Lấy code từ repo có sẵn về máy tính cá nhân dựa theo link 'URL'
+2. git branch <branch_name>: Tạo branch mới nhưng không chuyển nhánh sang branch mới đó.
+3. git checkout <branch_name>: Chuyển sang 1 branch đã tạo trước đó.
+4. git checkout -b <branch_name> : Tạo branch mới sau đó chuyển sang branch đó ngay lập tức.
+5. git pull origin master : Lấy code mới nhất từ branch master trên remote.
