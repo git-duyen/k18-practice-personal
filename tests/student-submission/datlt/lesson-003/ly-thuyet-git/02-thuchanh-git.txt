@@ -1,0 +1,62 @@
+a: tạo 3 file: file1, file2, file3
+- local: (trống, chưa có repo)
+- working directory: file1, file2, file3
+- staging area: (trống)
+- remote: (trống)
+
+b: chạy lệnh: git init
+- local: folder .git được tạo ra
+- working directory: file1, file2, file3
+- staging area: (trống)
+- remote: (trống)
+
+c: chạy lệnh git commit -m "init project"
+- local: Không thay đổi (lệnh commit thất bại do chưa có file nào trong staging area)
+- working directory: file1, file2, file3
+- staging area: (trống)
+- remote: (trống)
+Giải thích: vì chưa chạy git add nên không có file nào trong staging area để commit
+
+d: chạy lệnh git add file1
+- local: Không thay đổi
+- working directory: file1, file2, file3
+- staging area: file1
+- remote: (trống)
+Giải thích: chạy lệnh git add file1 sẽ đưa file1 vào staging area
+
+e: chạy lệnh git commit -m "add file"
+- local: Tạo commit "add file" chứa file1
+- working directory: file1, file2, file3
+- staging area: (trống)
+- remote: (trống)
+Giải thích: chạy lệnh git commit -m "add file" sẽ đưa file1 từ staging area vào local repository
+
+f: chạy lệnh git add .
+- local: Không thay đổi
+- working directory: file1, file2, file3
+- staging area: file1, file2, file3
+- remote: (trống)
+Giải thích: chạy lệnh git add . sẽ đưa tất cả file trong working directory vào staging area
+
+g. Chạy lệnh git restore --staged file2
+- local: Không thay đổi
+- working directory: file1, file2, file3
+- staging area: file1, file3
+- remote: (trống)
+Giải thích: `git restore --staged file2` đưa file2 ra khỏi staging area
+
+h. Chạy lệnh git commit -m "add all files"
+- local: Tạo commit "add all files" chứa file1, file3
+- working directory: file1, file2, file3
+- staging area: (trống)
+- remote: (trống)
+Giải thích: Chỉ các file trong staging area (file1, file3) được đưa vào commit
+
+i. Chạy lệnh git reset HEAD~1
+- local: Xóa commit "add all files", HEAD quay lại commit "add file"
+- working directory: file1, file2, file3
+- staging area: file1
+- remote: (trống)
+Giải thích: `git reset HEAD~1` mặc định là --mixed, xóa commit gần nhất, 
+đưa staging area về giống HEAD mới (chỉ còn file1), 
+còn nội dung thay đổi của file3 vẫn giữ lại ở working directory dưới dạng unstaged

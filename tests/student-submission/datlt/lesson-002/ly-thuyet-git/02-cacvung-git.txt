@@ -1,0 +1,10 @@
+a. tạo 3 file lần lượt là 1 2 3
+b. git init sẽ tạo repository local
+c. lệnh git commit sẽ báo lỗi do chưa add file vào staging area
+d. lệnh git add file1 sẽ add file1 vào staging area
+e. lệnh git commit -m "add file1" sẽ commit file1 vào repository
+f. lệnh git comit -m"add file" sẽ báo lỗi do chưa add file vào staging area
+
+tóm lại sau các bước từ a đến f thì 
+file 1 được commit vào repository
+file 2 và 3 vẫn ở trạng thái chưa commit

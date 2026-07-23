@@ -1,0 +1,31 @@
+a: chạy lệnh git init
+- local: folder .git được tạo ra
+- working directory: (trống)
+- staging area: (trống)
+- remote: (trống)
+
+b: tạo các file1, file2, oops/file3
+- local: không thay đổi
+- working directory: file1, file2, oops/file3
+- staging area: (trống)
+- remote: (trống)
+
+c: thêm .gitignore với nội dung là file1 và oops/
+- local: không thay đổi
+- working directory: file1, file2, oops/file3, .gitignore
+- staging area: (trống)
+- remote: (trống)
+
+d: chạy lệnh git add .
+- local: không thay đổi
+- working directory: file1, file2, oops/file3, .gitignore
+- staging area: file2, .gitignore
+- remote: (trống)
+Giải thích: file1 bị ignore; oops/ bị ignore nên oops/file3 không được stage; file2 và .gitignore được stage
+
+e: chạy lệnh git commit -m "init project"
+- local: tạo commit "init project" chứa file2, .gitignore
+- working directory: file1, file2, oops/file3, .gitignore
+- staging area: (trống)
+- remote: (trống)
+Giải thích: commit được tạo từ các file trong staging area

@@ -1,0 +1,4 @@
+git commit --amend: Sửa commit trước
+git commit --amend -m"message": Thay commit message cũ bằng "message" mới đồng thời cập nhật nội dung commit (nếu có)
+git restore --staged <file_name>: Khôi phục file về trạng thái trước khi add
+git reset --hard HEAD~1: Xóa commit trước

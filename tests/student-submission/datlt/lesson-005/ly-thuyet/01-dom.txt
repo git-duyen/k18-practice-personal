@@ -1,0 +1,45 @@
+1. Cấu trúc DOM cơ bản của một trang web thường bao gồm các thẻ:
+document, html, head, body, header, nav, main, section, article,
+aside, footer, div, p, h1, h2, a, img, form, input, button, script,....
+
+Mỗi thẻ HTML là một Element Node trong cây DOM. 
+Văn bản bên trong thẻ là Text Node. 
+Các thuộc tính (attributes như class, id, src, href) là Attribute Node.
+
+2. Cấu trúc HTML của phần tử <table>:
+- <table>: gốc bảng
+- <caption>: chú thích/tiêu đề bảng
+- <thead>: nhóm tiêu đề cột
+- <tbody>: nhóm nội dung chính
+- <tfoot>: nhóm hàng tổng kết
+- <tr>: hàng (table row)
+- <th>: ô tiêu đề (table header cell)
+- <td>: ô dữ liệu (table data cell)
+
+ví dụ là
+<table>
+  <caption>Đây là bảng của tôi</caption>
+  <thead>
+    <tr>
+      <th>Tiêu đề cột 1</th>
+      <th>Tiêu đề cột 2</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Nội dung hàng 1 ô 1</td>
+      <td>Nội dung hàng 1 ô 2</td>
+    </tr>
+    <tr>
+      <td>Nội dung hàng 2 ô 1</td>
+      <td>Nội dung hàng 2 ô 2</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td>Tổng số hàng</td>
+      <td>2 hàng</td>
+    </tr>
+  </tfoot>
+</table>
+
