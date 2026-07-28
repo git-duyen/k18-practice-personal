@@ -1,0 +1,16 @@
+a. 
+- Working directory
+
+b.
+- file1.txt: Local
+- file2.txtL: Local
+- oops/file3.txt: Local
+
+c.
+- Local 
+
+d. 
+- Staging
+
+e.
+- Repository

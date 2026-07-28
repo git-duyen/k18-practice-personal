@@ -1,0 +1,25 @@
+git commit --ammend : undo commit gan nhat
+git commit --ammend -m "message" : undo commit  với message
+git restore -staged <file> : restore file cu the
+git reset HEAD~1 : reset 1 commit
+
+//Sửa commit message
+git commit --amend -m "Message mới"
+
+//Thêm file quên stage 
+git add file.txt
+git commit --amend --no-edit
+
+//Vừa thêm file vừa sửa message
+git add forgotten_file.js
+git commit --amend -m "feat:thêm file"
+
+//Bỏ file khỏi commit cuối 
+git reset HEAD~ -- file_to_remove.js 
+git commit --amend --no-edit  
+
+//Amend với commit đã push
+git commit --amend -m "edited message"
+git push --force-with-lease
+
+

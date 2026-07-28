@@ -1,0 +1,18 @@
+a. Tạo 3 file 
+Tạo 3 file local 
+
+b. Chạy lệnh git init 
+Khởi tạo repo local 
+
+c. Chạy lệnh git commit -m "init project"
+Chưa có file nào được commit do chưa có file mới được add
+
+d. Chạy lệnh git add file1 
+Add thêm file1 vào staging 
+
+e. Chạy lệnh git commit -m "add file1" 
+Commit file1 với message "add file 1"
+
+f. Chạy lệnh git commit -m "add file"
+Không có file mới được commit do không có file nào được add 
+
