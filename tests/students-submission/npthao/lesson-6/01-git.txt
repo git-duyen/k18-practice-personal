@@ -8,5 +8,5 @@ git checkout <branch_name> : checkout sang nhánh đã có
 
 git checkout -b <branch_name> : tạo + checkout sang nhánh mới
 
-git pull origin master: lấy toàn bộ code từ nhánh master về, gộp các commit đó vào nhánh hiện đang đứng
+git pull origin master: lấy toàn bộ code từ nhánh master về, đưa các commit đó vào nhánh hiện đang đứng
 
