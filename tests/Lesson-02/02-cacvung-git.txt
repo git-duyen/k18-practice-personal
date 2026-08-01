@@ -1,0 +1,10 @@
+a. Tạo 3 file: file1, file2, file3
+b. chạy lệnh init ==> khởi tạo git
+c: chạy lệnh git commit -m "init project" ==> báo lỗi không có file nào để commit
+d. chạy lệnh git add file1 ==> file 1 move từ working directory sang stanging area
+e. chạy lệnh git commit -m "add file1" ==> file 1 move từ stanging area sang repository
+f. chạy lệnh git commit -m"add file" ==> báo lỗi không có file nào để commit
+
+Kết luận:
+file 1: repository
+file2, file3: working directory

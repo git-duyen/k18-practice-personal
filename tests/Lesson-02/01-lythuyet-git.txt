@@ -1,0 +1,4 @@
+git init: khởi tạo git tại folder đang đứng
+git add <file name> : move file có tên <file name> từ vùng working diretory sang vùng staging area
+git add .: move tất cả các file đang thuộc vùng working directory sang vùng staging area
+git commit -m 'message': move tất cả các file thuộc vùng staging area qua repository
