@@ -34,7 +34,7 @@
     - Ngoặc đơn
     - Ngoặc kép
     - Backtick: khi chuỗi có chứa biến, bắt buộc phải dùng dấu backtick
-3. Number
+3. Number:
     - Số nguyên
     - Số thực
     - Vô hạn
@@ -45,18 +45,20 @@
 
     !== : Có chuyển đổi dữ liệu khi so sánh
    
-    Ví dụ: 
-    Console.log(5==='5') ==> Fail
-    Console.log(5=='5'); ==> True
-5. Toán tử 1 ngôi: a++, ++a, a--, --a
-    Ví dụ: 
-    const a = 10;
-    b = ++a;
-    ==> Giá trị tăng lên trước sau đó gán cho b --> a =11, b=11
+    Ví dụ:   
+    Console.log (5==='5') ==> Fail  
+    Console.log (5=='5'); ==> True
+5. Toán tử 1 ngôi: a++, ++a, a--, --a  
+    Ví dụ:  
+    const a = 10;  
+    b = ++a;  
+    ==> Giá trị tăng lên trước sau đó gán cho b  
+        --> a =11, b=11
 
-    const c = 10;
-    d = c ++;
-    ==> giá trị c mang gán cho d, sau đó c tăng giá trị --> c = 11, d = 10
+    const c = 10;  
+    d = c ++;  
+    ==> giá trị c mang gán cho d, sau đó c tăng giá trị  
+    --> c = 11, d = 10
 6. Toán học: +, -, *, /
 7. Điều kiện
     - if...  
@@ -79,4 +81,9 @@
  ==> dùng typeof  
     ví dụ:  
     const name = "Nguyễn Thị Lượm";  
-    console.log(typeof name);
+    console.log (typeof name);
+
+``` 
+Lưu ý: luôn làm đẹp code trước khi commit bằng cách:
+    - Right click vào vùng viết code > Format Document
+    - Shift + Alt +F
