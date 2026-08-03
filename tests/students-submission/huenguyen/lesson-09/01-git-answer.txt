@@ -1,0 +1,45 @@
+a. Giải thích câu lệnh git rebase main và git merge feature/A
+
+    a.1. git rebase main
+    - Git rebase là lệnh để thay đổi base (gốc) của branch, giúp tạo ra lịch sử commit tuyến tính và sạch sẽ hơn.
+    - Câu lệnh: git rebase <tên_nhánh>
+    - Cách hoạt động: Git sẽ lấy tất cả các commit mới trên nhánh hiện tại, tạm thời cất đi, cập nhật nhánh hiện tại bằng các commit mới nhất từ main, 
+        sau đó lần lượt áp dụng lại các commit đã cất đi lên trên cùng.
+    - Kết quả: Tạo ra một lịch sử commit tuyến tính (thẳng hàng), trông như thể bạn vừa mới bắt đầu phát triển tính năng này trên phiên bản mới nhất của main.
+        Điều này giúp lịch sử dự án sạch sẽ và dễ theo dõi hơn.
+
+    a.2. git merge feature/A
+    - Git merge là lệnh được thực hiện khi bạn đang ở nhánh main và muốn gộp các thay đổi từ nhánh feature/A vào.
+    - Câu lệnh: git merge <tên_nhánh>
+    - Cách hoạt động: Git kết hợp lịch sử của cả hai nhánh lại với nhau.
+    - Kết quả: Tạo ra một merge commit (nếu không phải là fast-forward) để đánh dấu điểm giao thoa giữa hai nhánh.
+        Lịch sử sẽ hiển thị rõ ràng các nhánh rẽ ra và gộp lại, bảo tồn đúng trình tự thời gian thực tế của các commit.
+
+b. Giải thích các Merge Strategy: Fast-forward và Three-way merge
+
+    b.1. Fast-forward (Chuyển tiếp nhanh)
+    - Là khi merge không tạo ra commit merge. Và xảy ra khi không có thay đổi nào trên nhánh chính kể từ lúc tạo nhánh feature
+    - Cách hoạt động: Git không tạo commit mới. Nó chỉ đơn giản là "di chuyển" con trỏ của nhánh main lên phía trước để trùng với 
+        commit cuối cùng của nhánh feature.
+    - Khi nào xảy ra: Khi lịch sử là một đường thẳng và không có sự sai khác (diverge) giữa hai nhánh.
+
+    Ví dụ:
+    main: A --- B
+    feature:      C --- D
+
+    Sau khi merge:
+    main: A --- B --- C --- D
+
+    b.2. Three-way merge (Gộp ba điểm)
+    - Là khi merge có tạo ra commit merge. Và xảy ra khi bạn muốn merge feature branch vào branch chính, mà lịch sử của 2 branch này đã có sự khác nhau
+    - Cách hoạt động: Git sử dụng ba điểm dữ liệu để tạo ra một commit gộp (merge commit):
+        +Commit mới nhất của nhánh đích.
+        +Commit mới nhất của nhánh tính năng.
+        +Điểm chung cuối cùng (common ancestor) của cả hai nhánh.
+    - Khi nào xảy ra: Khi lịch sử dự án đã rẽ nhánh (diverged). Nếu hai nhánh cùng sửa đổi một dòng code ở cùng một file, 
+        Git sẽ báo lỗi Merge Conflict và yêu cầu người dùng xử lý thủ công trước khi hoàn tất việc gộp.
+
+    Ví dụ:
+    main:    A --- B --- E
+                \
+    feature:       C --- D
