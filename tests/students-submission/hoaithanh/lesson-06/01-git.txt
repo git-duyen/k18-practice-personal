@@ -1,0 +1,13 @@
+a. git clone <url>
+=>    clone project từ link github về máy qua url hoặc ssh
+b. git branch <branch_name>
+=>    tạo nhánh mới có tên <branch_name> từ vị trí đang đứng
+c. git checkout branch <branch_name>
+=>    di chuyển từ nhánh đang đứng đến nhánh <branch_name>
+d. git checkout -b <branch_name>
+=>    tạo một nhánh mới từ vị trí đang đứng, và di chuyển đến nhánh mới
+e. git pull origin master
+=>    Lấy (download) những commit mới nhất từ branch master của remote origin về và tự động gộp (merge) vào branch hiện tại trên máy của mình.
+    git pull: Tải và gộp thay đổi.
+    origin: Từ remote có tên origin.
+    master: Lấy dữ liệu từ branch master trên remote.
