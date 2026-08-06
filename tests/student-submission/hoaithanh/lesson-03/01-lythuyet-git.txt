@@ -1,0 +1,7 @@
+git commit --amend: mở editor sửa commmit gần nhất
+
+git commit --amend -m"<message>": sửa message commit gần nhất
+
+git restore --staged <file>: đưa file từ vùng staged về working directory
+
+git reset HEAT~1: đưa commit từ vùng repository về vùng working directory

@@ -1,0 +1,45 @@
+1. Cấu trúc DOM cơ bản của một trang web gồm những thẻ gì
+- <Thẻ mở thuộc tính = "giá trị thuộc tính" > text </thẻ đóng>
+- <thẻ tự đóng/>
+
+2. Hãy mô tả cấu trúc html của một bảng (table)
+<table> // Tạo 1 bảng
+  <thead> // Thẻ mở header, tạo tiêu đề
+    <tr> // Table row (1 hàng trong table)
+      <th>STT</th> // table header cột STT
+      <th>Họ tên</th> // cột Họ tên
+      <th>Tuổi</th> // cột Tuổi
+      <th>Địa chỉ</th> // cột địa chỉ
+    </tr> // thẻ đóng 
+  </thead> // Thẻ đóng header
+  <tbody> // Thẻ mở body, phần dữ liệu
+    <tr> // table row
+      <td>1</td> // table data ( dữ liệu hàng 1 cột STT)
+      <td>Nguyễn Văn A</td> // dữ liệu hàng 1 cột Họ Tên
+      <td>25</td> // dữ liệu hàng 1 cột tuổi
+      <td>Hà Nội</td> // dữ liệu hàng 1 cột địa chỉ
+    </tr>
+    <tr>
+      <td>2</td> // table data ( dữ liệu hàng 2 cột 1)
+      <td>Trần Thị B</td>
+      <td>30</td>
+      <td>TP. HCM</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Lê Văn C</td>
+      <td>28</td>
+      <td>Đà Nẵng</td>
+    </tr>
+  </tbody> // thẻ đóng body
+  <tfoot> // thẻ mở chân bảng
+    <tr>
+      <td colspan="2">Tổng</td>
+      <td>83</td>
+      <td>3 người</td>
+    </tr>
+  </tfoot> // thẻ đóng chân bảng
+</table> // thẻ đóng bảng
+
+
+

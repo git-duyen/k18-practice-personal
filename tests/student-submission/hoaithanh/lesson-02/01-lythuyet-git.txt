@@ -1,0 +1,11 @@
+git init
+Khởi tạo một repository Git trong thư mục hiện tại.
+
+git add <file name>
+Đưa một file cụ thể vào khu vực chờ (Staging Area).
+
+git add .
+Đưa tất cả file trong thư mục hiện tại và các thư mục con vào khu vực chờ (Staging Area)
+
+git commit -m"message"
+Lưu lại một phiên bản (snapshot) của các file đã được git add

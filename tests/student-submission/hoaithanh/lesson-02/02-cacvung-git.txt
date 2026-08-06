@@ -1,0 +1,6 @@
+Tạo 3 file: file1; file2; file3
+Chạy lệnh: git init => file1, file2, file3 ở Working directory
+Chạy lệnh: git commit -m"init project" Working directory
+Chạy lệnh: git add file1 => đưa file1 vào Staging area
+Chạy lệnh: git commit -m"add file1" => đưa file1 vào Repository
+Chạy lệnh: git commit -m"add file" => file2, file3 vẫn ở Working directory

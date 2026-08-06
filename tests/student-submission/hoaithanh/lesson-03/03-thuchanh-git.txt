@@ -1,0 +1,3 @@
+working directory: file1, oops/file3
+staging:
+repositoryL: file2
