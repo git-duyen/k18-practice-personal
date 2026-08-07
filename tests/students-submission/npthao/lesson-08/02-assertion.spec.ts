@@ -25,7 +25,7 @@ test("Material page - non web-first" , async({ page }) => {
     await page.goto("https://material.playwrightvn.com/019-enable-form.html");
     await page.waitForTimeout(1_000);
 
-    const isVisible = await page.locator("//button[@id='submitButton']").isEnabled();
+    const isVisible = await page.locator("//button[@id='submitButton']").isVisible();
     expect(isVisible).toEqual(true);
 
 });

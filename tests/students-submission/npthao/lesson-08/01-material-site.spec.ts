@@ -1,10 +1,6 @@
 import { test , expect } from "@playwright/test" ;
 
-test.describe("Material site" , async() => {
-    test.beforeAll(async({ page }) => {
-        await page.goto("https://playwrightvn.com/");
-
-    });
+test.describe("Authentication" , async() => {
 
     test.beforeEach(async({ page }) => {
         await test.step("Go to material page" , async() => {
