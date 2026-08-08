@@ -1,0 +1,61 @@
+Đang đứng tại vị trí : //div[@id='child'] === self === Node hiện tại 
+
+a. Các phần tử con trực tiếp của //div[@id='child'] là:
+label[for="email"]
+input#email[type="email"]
+
+b. Phần tử cha trực tiếp của //div[@id='child'] là:
+form#registrationForm
+
+c. Các phần tử hậu duệ (descendant )
+<label for="email">Email:</label>
+<input type="email" id="email" name="email" required="">
+
+d. Các phần tử tổ tiên (ancestor)
+<form id="registrationForm">
+
+e. Các phânf tử anh em (sibling)
+<div class="form-group" id="parent">
+<div class="form-group">
+<div class="form-group">
+<div class="form-group">
+
+f. Các phần tử phía sau (following) của `//div[@id='child']`:
+- `div.form-group` chứa Gender
+- `label[for="gender"]`
+- `div` chứa nhóm radio Gender
+- `div` chứa radio Male
+- `input#male[type="radio"]`
+- `label[for="male"]`
+- `div` chứa radio Female
+- `input#female[type="radio"]`
+- `label[for="female"]`
+
+- `div.form-group` chứa Hobbies
+- `label[for="hobbies"]`
+- `div` chứa nhóm checkbox Hobbies
+- `div` chứa checkbox Reading
+- `input#reading[type="checkbox"]`
+- `label[for="reading"]`
+- `div` chứa checkbox Traveling
+- `input#traveling[type="checkbox"]`
+- `label[for="traveling"]`
+- `div` chứa checkbox Cooking
+- `input#cooking[type="checkbox"]`
+- `label[for="cooking"]`
+
+- `div.form-group` chứa button Register
+- `button[type="submit"]`
+
+g. Các phần tử phía trước (preceding)
+    <div class="form-group" id="parent">
+    <label for="username" id="preceding">Username:</label>
+    <input type="text" id="username" name="username" required="">
+
+h. Các phần tử anh em phía sau cùng cấp (following-sibling)
+<div class="form-group">
+<div class="form-group">
+<div class="form-group">
+
+i. Các phần tử anh em phía trước cùng cấp (preceding-sibling)
+<div class="form-group" id="parent">
