@@ -11,7 +11,7 @@
 - **git checkout -b <branch_name>**: vừa tạo branch, vùa đặt branch làm nhánh chính  
 
     ``` Chú ý: Luôn pull code về trước khi tạo nhánh mới ```
-- **gitignore**: fill tên các file muốn bỏ ra sự quản lý của git vô folder này  
+- **gitignore**: fill tên các file muốn bỏ ra sự quản lý của git vô file này  
     ``` dùng #nội dung commt trong file gitignore ```
 
 ## Một số convention phổ biến
