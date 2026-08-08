@@ -1,0 +1,9 @@
+a. Tạo 3 file: file1, file2, file3: Tạo 3 file
+b. Chạy lệnh: git init: Khởi tạo git
+c. Chạy lệnh: git commit -m "init project": báo lỗi là rỗng
+d. Chạy lệnh: git add file1: đưa file 1 từ vùng working directory vào vùng staging area
+e. Chạy lệnh: git commit -m "add file": Commit lấy nội dung trong staging area (file1) và lưu vào repository
+f. Chạy lệnh: git add .: thêm các file còn lại vào vùng staging
+g. Chạy lệnh: git restore --staged file2: bỏ file 2 ra khỏi vùng staging mà không bị xóa
+h. Chạy lệnh: git commit -m "add all files": commit file 3 vào vùng repository
+i. Chạy lệnh: git reset HEAD~1: quay lại trước 1 commit tức là hủy commit file3 và file 3 vẫn nằm ở vùng staging

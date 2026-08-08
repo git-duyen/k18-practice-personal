@@ -1,0 +1,7 @@
+git init: Dùng để khởi tạo một repository Git mới trong thư mục hiện tại
+
+git add <file_name>: Dùng để thêm một file cụ thể vào staging area (vùng chuẩn bị commit).
+
+git add . : Dùng để thêm tất cả các file đã thay đổi trong thư mục hiện tại vào staging area.
+
+git commit -m "message": Dùng để tạo một commit mới với thông điệp mô tả thay đổi.

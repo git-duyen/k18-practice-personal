@@ -1,0 +1,6 @@
+Tạo ra 3 file: file1, file2, file3 -> Vùng Working Dỉctory
+Chạy lệnh git init -> Khởi tạo repository git trong thư mục
+Chạy lệnh git commit -m"init project" -> lệnh này sẽ báo lỗi do chưa có file nào được khởi ọ 
+Chạy lệnh: git add file1 -> Đưa file1 vào vùng chuẩn bị commit (Stagging Area)
+Chạy lệnh: git commit -m"add file1" -> Ở vùng Repository (các commit)
+Chạy lệnh: git commit -m"add file" -> báo lỗi do không còn file nào nằm ở vùng chuẩn bị commit

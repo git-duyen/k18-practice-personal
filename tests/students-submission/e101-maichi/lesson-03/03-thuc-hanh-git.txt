@@ -1,0 +1,32 @@
+a. Chạy lệnh git init
+- Local: Tạo một thư mục chứa project, ví dụ myproject/.
+- Working directory: rỗng
+- Staging: Rỗng 
+- Repository: Vừa khởi tạo, thư mục .git/ được tạo ra, nhưng chưa có commit nào.
+b. Tạo file file1.txt, file2.txt, oops/file3.txt.
+- Local: Các file này xuất hiện trong thư mục project.
+- Working directory: Có 3 file mới chưa được theo dõi bởi Git.
+- Staging: Vẫn rỗng.
+- Repository: Chưa có gì thay đổi.
+c. Thêm file .gitignore, thêm vào 2 dòng:
+   i. file1.txt
+   ii. oops/
+- Local: Xuất hiện thêm file .gitignore.
+- Working directory: .gitignore là file mới, còn file1.txt và thư mục oops/ được đánh dấu là sẽ bị bỏ qua.
+- Staging: Vẫn rỗng.
+- Repository: Chưa có gì thay đổi.
+d. Chạy lệnh: git add . thêm file2.txt vào vùng staging
+- Local: Không thay đổi, vẫn là các file trong thư mục.
+- Working directory: Các file vẫn tồn tại.
+- Staging:
+   file2.txt được thêm vào (vì không bị ignore).
+   .gitignore được thêm vào.
+   file1.txt và oops/file3.txt không được thêm vì đã bị ignore.
+- Repository: Vẫn chưa có commit nào.
+e. Chạy lệnh: git commit -m "init project": commit file2.txt vào vùng repository
+- Local: Không thay đổi.
+- Working directory: Các file vẫn nằm trong thư mục.
+- Staging: Các file đã được commit, staging area rỗng trở lại.
+- Repository: Tạo commit đầu tiên với message "init project", trong đó chứ file2.txt và .gitignore.
+
+
