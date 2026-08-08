@@ -11,7 +11,7 @@
 - **git checkout -b <branch_name>**: vừa tạo branch, vùa đặt branch làm nhánh chính  
 
     ``` Chú ý: Luôn pull code về trước khi tạo nhánh mới ```
-- **gitignore**: fill tên các file muốn bỏ ra sự quản lý của git vô folder này  
+- **gitignore**: fill tên các file muốn bỏ ra sự quản lý của git vô file này  
     ``` dùng #nội dung commt trong file gitignore ```
 
 ## Một số convention phổ biến
@@ -27,7 +27,7 @@
     const myInfo = {  
         name: "Duyen",
         age: 18,  
-        codingClass{  
+        codingClass:{  
             name: "PlayWright",  
             level: "Beginer"  
         }  
@@ -38,7 +38,7 @@
     console.log(myInfo ["codingClass"] ["name"]) //Playwright  
 ## Học về mảng (Array)
 - **Học cách lấy ra giá trị của 1 phần tử trong mảng**  
-    const arr [15, 16, 58, 95]  
+    const arr = [15, 16, 58, 95]  
     Console.log (arr[3]); //95  
     console.log(arr.lenght) // in ra độ dài của mảng, = 4
 ## Học về hàm
