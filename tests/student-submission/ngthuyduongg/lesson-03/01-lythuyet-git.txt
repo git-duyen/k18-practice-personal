@@ -1,0 +1,4 @@
+git commit --amend: dùng để sửa commit message trong giao diện VIM
+git commit --amend -m "<Message>": dùng để sửa commit message
+git restore --staged<file>: Bỏ file khỏi Staging (Unstage), file ở trạng thái Working Directory
+git reset HEAD~1: Hủy commit gần nhất, file trở về trạng thái Working Directory

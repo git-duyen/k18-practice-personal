@@ -1,0 +1,30 @@
+// Cấu trúc DOM cơ bản của một trang web gồm các thẻ:
+
+Cấu trúc DOM cơ bản của một trang web bắt đầu từ gốc là thẻ <html>, bên trong chia thành hai phần chính là <head> (metadata) và <body> (nội dung hiển thị) - với các thẻ cơ bản như <title>, <h1>, <p>, và <a> 
+
+// Mô tả cấu trúc html của 1 table
+
+html
+
+<table> // thẻ mở table
+  <thead> // thẻ mở tiêu đề
+    <tr> // thẻ mở hàng
+      <th>Product Name</th> // tạo thành ô tiêu đề 1
+      <th>Price</th> // tạo thành ô tiêu đề 2
+      <th>Quantity</th> // tạo thành ô tiêu đề 3
+      <th>Total</th> // tạo thành ô tiêu đề 4
+      <th>Actions</th> // // tạo thành ô tiêu đề 5
+    </tr> // thẻ đóng hàng
+  </thead> // thẻ đóng tiêu đề
+  <tbody id="cart-items"> // thẻ mở body
+    <!-- Cart items will be added here dynamically -->
+  </tbody> // thẻ đóng body
+  <tfoot> // thẻ mở dòng cuối
+    <tr> // thẻ mở hàng
+      <td colspan="3" class="total">Total Price:</td> // tạo thành ô dữ liệu 1
+      <td class="total-price">$0.00</td> // tạo thành ô dữ liệu 2
+      <td></td> // tạo thành ô trống
+    </tr> // thẻ đóng hàng
+  </tfoot> // thẻ đóng dòng cuối
+</table> // thẻ đóng table
+

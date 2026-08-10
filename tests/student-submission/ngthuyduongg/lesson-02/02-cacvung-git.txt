@@ -1,0 +1,5 @@
+Git có 3 vùng chính:
+
+- Working Directory: Là nơi chứa các file dự án trên máy tính. Tại đây có thể Tạo/sửa/xóa file. Bất kỳ thay đổi nào cũng sẽ được Git đánh dấu là "Modified" (chưa được lưu vào Git)
+- Staging area: Là nơi chọn lọc những thay đổi nào sẽ được lưu vào lần commit tiếp theo
+- Git Directory: Là nơi Git lưu trữ lịch sử các phiên bản của dự án
