@@ -1,0 +1,7 @@
+// Giải thích các câu lệnh
+
+a. git clone <url>: lấy code từ 1 repo có sẵn về máy tính cá nhân
+b. git branch <branch_name>: nhánh mới "copy" giống hệt nhánh hiện tại
+c. git checkout <branch_name>: chuyển sang nhánh mới
+d. git checkout -b<branch_name>: Vừa tạo vừa chuyển sang nhánh mới
+e. git pull origin master: Lấy code từ branch master trên remote origin về branch hiện tại trên máy
