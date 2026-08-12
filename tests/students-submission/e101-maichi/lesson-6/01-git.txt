@@ -1,0 +1,25 @@
+git clone <url>
+Dùng để tải toàn bộ repo từ GitHub về máy tính của bạn.
+
+<url> là đường dẫn repo (HTTPS hoặc SSH).
+
+Sau khi chạy, bạn sẽ có một thư mục mới chứa toàn bộ code và lịch sử commit.
+
+b. git branch <branch_name>
+Tạo một nhánh mới với tên <branch_name>.
+
+Nhánh này sẽ dựa trên commit hiện tại, nhưng chưa chuyển sang nhánh đó.
+
+c. git checkout <branch_name>
+Dùng để chuyển sang nhánh có sẵn.
+
+d. git checkout -b <branch_name>
+Đây là cách nhanh để tạo nhánh mới và chuyển sang ngay.
+
+e. git pull origin <branch>
+Dùng để lấy code mới nhất từ GitHub về máy local, đồng thời tự động merge vào nhánh hiện tại.
+
+origin là tên mặc định của remote repo (có thể đổi nhưng thường để nguyên).
+
+<branch> là tên nhánh bạn muốn đồng bộ
+
