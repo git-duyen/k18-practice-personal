@@ -1,0 +1,10 @@
+a. Giải thích câu lệnh git rebase main, git merge feature/A
+git rebase main dùng để đưa các commit của branch hiện tại lên trên commit mới nhất của branch main
+Các bước thực hiện: Đang đứng ở branch hiện tại → lấy những commit riêng của branch đó → đưa chúng lên trên phiên bản mới nhất của main
+
+git merge feature/A dùng để gộp các thay đổi từ branch feature/A vào branch hiện tại
+
+b. Giải thích các merge strategy: fast-forward, three way merge. Khi nào thì các strategy này xảy ra?
+- Fast-forward: xảy ra khi branch hiện tại không có commit mới kể từ commit chung với branch được merge. Trong trường hợp này, Git chỉ cần di chuyển con trỏ của branch hiện tại lên commit mới nhất của branch được merge, mà không tạo ra merge commit mới
+
+- Three-way merge: xảy ra khi hai branch đều có commit mới kể từ commit chung. Git sử dụng commit chung và commit mới nhất của cả hai branch để kết hợp các thay đổi, sau đó tạo ra một merge commit mới
