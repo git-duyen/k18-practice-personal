@@ -1,0 +1,87 @@
+a. Giải thích câu lệnh git rebase main, git merge feature/A
+
+1. git rebase main
+
+Lệnh git rebase main dùng để thay đổi base/gốc của branch hiện tại sang branch main.
+
+Khi chạy lệnh này, Git sẽ lấy các commit của branch hiện tại và đưa chúng lên phía sau commit mới nhất của branch main.
+
+Mục đích:
+- Cập nhật branch hiện tại theo code mới nhất từ main.
+- Giúp lịch sử commit tuyến tính và gọn gàng hơn.
+- Tránh tạo thêm merge commit không cần thiết.
+
+Ví dụ:
+Đang đứng ở branch feature/login, chạy:
+
+git rebase main
+
+Nghĩa là lấy main làm base mới cho branch feature/login.
+
+2. git merge feature/A
+
+Lệnh git merge feature/A dùng để gộp thay đổi từ branch feature/A vào branch hiện tại.
+
+Ví dụ:
+Đang đứng ở branch main, chạy:
+
+git merge feature/A
+
+Nghĩa là gộp code từ branch feature/A vào branch main.
+
+Mục đích:
+- Gộp code từ branch khác vào branch hiện tại.
+- Giữ lại lịch sử commit của các branch.
+- Có thể tạo merge commit nếu lịch sử của hai branch đã khác nhau.
+
+
+b. Giải thích các merge strategy: fast-forward, three way merge. Khi nào thì các strategy này xảy ra?
+
+1. Fast-forward merge
+
+Fast-forward merge xảy ra khi branch hiện tại chưa có commit mới nào kể từ lúc branch feature được tạo ra.
+
+Khi đó Git không cần tạo merge commit, mà chỉ cần di chuyển con trỏ branch hiện tại tới commit mới nhất của branch được merge vào.
+
+Ví dụ:
+
+main:      A---B
+                \
+feature/A:       C---D
+
+Sau khi merge feature/A vào main:
+
+main:      A---B---C---D
+
+Đặc điểm:
+- Không tạo merge commit.
+- Lịch sử commit thẳng và dễ đọc.
+- Xảy ra khi branch chính không có thay đổi mới trong thời gian branch feature được phát triển.
+
+2. Three-way merge
+
+Three-way merge xảy ra khi cả branch hiện tại và branch muốn merge đều có commit mới riêng sau khi tách branch.
+
+Khi đó Git cần so sánh 3 điểm:
+- Commit gốc chung của 2 branch.
+- Commit mới nhất của branch hiện tại.
+- Commit mới nhất của branch được merge vào.
+
+Ví dụ:
+
+main:      A---B---C
+                \
+feature/A:       D---E
+
+Sau khi merge feature/A vào main:
+
+main:      A---B---C-------M
+                \         /
+feature/A:       D---E----
+
+Trong đó M là merge commit.
+
+Đặc điểm:
+- Có thể tạo ra merge commit.
+- Xảy ra khi lịch sử của 2 branch đã khác nhau.
+- Có thể phát sinh conflict nếu 2 branch sửa cùng một vị trí trong cùng một file.
