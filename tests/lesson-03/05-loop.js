@@ -1,9 +1,9 @@
 //Tong từ 1 đến 100
-let sum = 0;
+let sumTotal = 0;
 for (let i = 1; i <= 100; i ++) {
-     sum+=i;
+     sumTotal+=i;
 }
-console.log(`Tong tu 1 den 100 la: ${sum}`);
+console.log(`Tong tu 1 den 100 la: ${sumTotal}`);
 
 
 //In bang cuu chuong tu 2 đến 9
@@ -15,18 +15,18 @@ for (let numb = 2; numb <= 9; numb ++){
 }
 
 //Mảng chứa các số lẻ từ 1 đến 99
-const arr = [];
+const oddNumbers = [];
 for (let i = 1; i <= 99; i ++){
     if ( i% 2 !==0){
-         arr.push (i);
+         oddNumbers.push (i);
     }
 }
-console.log(arr)
+console.log(oddNumbers)
 
 //In ra 10 email dua tren ten nguoi dung va so thứ tự
-const arr = ["kim", "Thuy", "Tho", "Hoa", "Moc", "Tinh", "Sao", "Van", "Phong", "Thien"]
+const emailList = ["kim", "Thuy", "Tho", "Hoa", "Moc", "Tinh", "Sao", "Van", "Phong", "Thien"]
 for (let i = 1; i <= 10; i++) {
-    console.log(`${arr[i - 1]}${i}@gmail.com`);
+    console.log(`${emailList[i - 1]}${i}@gmail.com`);
 }
 
 //Tinh tong doanh thu cua 12 thang
@@ -45,8 +45,8 @@ const doanhThuThang = [
     { "month": 12, "Total": 200, },
 
 ]
-let sum = 0;
+let totalRevenue = 0;
 for (let i = 0; i <= 11; i++) {
-    sum += doanhThuThang[i].Total;
+    totalRevenue += doanhThuThang[i].Total;
 }
-console.log(`doanh thu cua 12 thang la: ${sum}`);
+console.log(`doanh thu cua 12 thang la: ${totalRevenue}`);
