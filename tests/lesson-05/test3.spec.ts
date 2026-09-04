@@ -10,7 +10,7 @@ test('test3', async ({ page }) => {
     });
 
     await test.step('Add new task Todo 1 đến 100', async () => {
-        for (let i = 1; i <= 10; i++) {
+        for (let i = 1; i <= 100; i++) {
             await page.locator('//input[@id="new-task"]').fill('Todo' + String(i));
             await page.locator('//button[@id="add-task"]').click();
         }
@@ -18,7 +18,7 @@ test('test3', async ({ page }) => {
 
     await test.step('delete task lẻ', async () => {
         page.on('dialog', async dialog => dialog.accept());
-        for (let y = 1; y <= 10; y++) {
+        for (let y = 1; y <= 100; y++) {
             if (y % 2 !== 0) {
                 const xpath = `//button[@id='todo${y}-delete']`;
                 await page.locator(`${xpath}`).click();
