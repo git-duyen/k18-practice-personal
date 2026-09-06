@@ -10,10 +10,10 @@ test('test2', async ({ page }) => {
     await test.step('Add 2 product 1', async () => {
         await page.locator('//button[@data-product-id="1"]').dblclick();
     });
-    await test.step('Add 2 product 2', async () => {
-        await page.locator('//button[@data-product-id="2"]').click();
+    await test.step('Add 3 product 2', async () => {
+        await page.locator('//button[@data-product-id="2"]').click({ clickCount: 3 });
     });
-    await test.step('Add 2 product 3', async () => {
-        await page.locator('//button[@data-product-id="3"]').click({ clickCount: 3 });
+    await test.step('Add 1 product 3', async () => {
+        await page.locator('//button[@data-product-id="3"]').click();
     });
 });

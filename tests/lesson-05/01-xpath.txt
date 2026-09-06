@@ -1,13 +1,13 @@
 1. Sử dụng xpath tuyệt đối,
     1. Lấy input “Họ và tên”
-        html/body/div/div/form/input[1]
+        /html/body/div/div/form/input[1]
     2. Lấy button “Đăng ký”
-        html/body/div/div/form/button
+        /html/body/div/div/form/button
     3. Lấy hàng đầu tiên trong tbody
-        html/body/div/div/table/tbody/tr[1]
+        /html/body/div/div/table/tbody/tr[1]
 2. Sử dụng xpath tương đối, chọn phần tử sau:
     1. Lấy input có placeholder=”Số điện thoại”
-        //input[@id="phone"] 
+        //input[@placeholdeer="số điện thoại"] 
     2. Lấy email của “Trần Thị Bình” (hàng 2, cột 2)
         //table[@id="resultTable"]//tbody//tr[2]//td[2]
     3. Lấy số điện thoại của “Lê Hoàng Cường” (hàng 3, cột 3)

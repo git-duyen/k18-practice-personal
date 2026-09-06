@@ -39,7 +39,7 @@ test('test4', async ({page}) => {
         await page.click('//button[@id="add-note"]');
 
         await page.locator('//input[@id="note-title"]').fill('press');
-        await page.locator('//textarea[@id="note-content"]').fill('àm press dùng để mô phỏng việc nhấn phím bàn phím như Enter, Tab, Escape hoặc các phím khác');
+        await page.locator('//textarea[@id="note-content"]').fill('Hàm press dùng để mô phỏng việc nhấn phím bàn phím như Enter, Tab, Escape hoặc các phím khác');
         await page.click('//button[@id="add-note"]');
 
         await page.locator('//input[@id="note-title"]').fill('dblclick');
